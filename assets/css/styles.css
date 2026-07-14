@@ -1257,6 +1257,11 @@ body::before {
   opacity: 0.55;
 }
 
+.hero .floating-card,
+.hero .logo-plaque {
+  display: none !important;
+}
+
 .hero {
   padding: 72px 0 68px;
 }
