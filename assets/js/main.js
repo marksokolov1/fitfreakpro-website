@@ -10,6 +10,28 @@ const trackEvent = (eventName, detail = {}) => {
   }));
 };
 
+const normalizeHeaderNavigation = () => {
+  if (nav) {
+    nav.innerHTML = `
+      <a href="/#product">Product</a>
+      <a href="/how-it-works/">How It Works</a>
+      <a href="/for-personal-trainers/">For Personal Trainers</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/about/">About</a>
+      <a href="/support/">Support</a>
+    `;
+  }
+
+  const headerCta = document.querySelector('.header-actions .btn-primary');
+  if (headerCta) {
+    headerCta.textContent = 'Download Free Coach App';
+    headerCta.setAttribute('href', '/#download');
+    headerCta.setAttribute('data-track', 'header_app_download_cta');
+  }
+};
+
+normalizeHeaderNavigation();
+
 const closeNavigation = () => {
   const wasOpen = header && header.classList.contains('nav-open');
   if (header) header.classList.remove('nav-open');
