@@ -399,19 +399,6 @@ button:focus-visible {
   min-height: 500px;
 }
 
-.logo-plaque {
-  position: absolute;
-  top: -26px;
-  right: 72px;
-  width: 170px;
-  padding: 12px;
-  border-radius: 22px;
-  background: rgba(0,0,0,0.74);
-  border: 1px solid rgba(201,255,31,0.20);
-  box-shadow: 0 0 60px rgba(201,255,31,0.17);
-  transform: rotate(2deg);
-}
-
 .dashboard-shell {
   position: relative;
   width: min(100%, 440px);
@@ -522,30 +509,6 @@ button:focus-visible {
 .avatar-dot:nth-child(2) { margin-left: -18px; background: linear-gradient(135deg, #99a3ff, #0b0b0b); }
 .avatar-dot:nth-child(3) { margin-left: -18px; background: linear-gradient(135deg, #c8ff1f, #0b0b0b); }
 .avatar-more { color: var(--lime); font-weight: 900; padding-left: 4px; }
-
-.floating-card {
-  position: absolute;
-  display: grid;
-  grid-template-columns: 42px 1fr;
-  align-items: center;
-  gap: 12px;
-  width: 230px;
-  padding: 14px;
-  border-radius: 18px;
-  border: 1px solid rgba(201,255,31,0.18);
-  background: rgba(8,9,8,0.86);
-  box-shadow: 0 24px 80px rgba(0,0,0,0.35), 0 0 34px rgba(201,255,31,0.10);
-  backdrop-filter: blur(18px);
-}
-.floating-card b { display:block; font-size:.95rem; letter-spacing:-.03em; }
-.floating-card span { display:block; color: rgba(255,255,255,.60); font-size:.78rem; margin-top:2px; }
-.float-one { top: 54px; left: -26px; animation: bob 6s ease-in-out infinite; }
-.float-two { bottom: 60px; right: -16px; animation: bob 7s ease-in-out .7s infinite; }
-
-@keyframes bob {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-}
 
 .section {
   padding: 82px 0;
@@ -1287,9 +1250,11 @@ body::before {
   min-height: 0;
   display: flex;
   align-items: center;
+  isolation: isolate;
 }
 
 .dashboard-shell {
+  z-index: 1;
   width: min(100%, 560px);
   margin-inline: auto 0;
   padding: 26px;
