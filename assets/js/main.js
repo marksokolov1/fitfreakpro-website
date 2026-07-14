@@ -2,6 +2,13 @@ const header = document.querySelector('.site-header');
 const toggle = document.querySelector('.mobile-toggle');
 const nav = document.querySelector('.main-nav');
 
+const trackEvent = (eventName, detail = {}) => {
+  if (!eventName) return;
+  window.dispatchEvent(new CustomEvent('fitfreakpro:analytics', {
+    detail: { eventName, ...detail }
+  }));
+};
+
 const closeNavigation = () => {
   if (header) header.classList.remove('nav-open');
   if (toggle) {
@@ -45,6 +52,17 @@ document.querySelectorAll('.faq-question').forEach((button, index) => {
     if (!item) return;
     const isOpen = item.classList.toggle('open');
     button.setAttribute('aria-expanded', String(isOpen));
+    if (isOpen) {
+      trackEvent('faq_expand', { question: button.textContent.trim().replace(/\+$/, '').trim() });
+    }
+  });
+});
+
+document.querySelectorAll('[data-track]').forEach((element) => {
+  element.addEventListener('click', () => {
+    trackEvent(element.getAttribute('data-track'), {
+      href: element.getAttribute('href') || ''
+    });
   });
 });
 

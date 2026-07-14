@@ -896,6 +896,37 @@ button:focus-visible {
 .pricing-card ul { margin: 24px 0 0; padding:0; list-style:none; display:grid; gap:12px; }
 .pricing-card li { display:flex; gap:10px; color:rgba(255,255,255,.84); }
 
+.pricing-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.pricing-faq-item {
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.045);
+  border-radius: 22px;
+}
+
+.pricing-faq-item h3 {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.pricing-faq-item p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: .94rem;
+}
+
+.faq-section {
+  padding-top: 42px;
+}
+
 .benefit-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -947,6 +978,26 @@ button:focus-visible {
 .footer-links a, .footer-legal a { color: rgba(255,255,255,.72); transition: color 160ms ease; }
 .footer-links a:hover, .footer-legal a:hover { color: var(--lime); }
 .footer-heading { color: var(--white); font-weight: 900; margin: 0 0 16px; letter-spacing:-.03em; }
+.footer-social-heading { margin-top: 24px; }
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  color: rgba(255,255,255,.78);
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.045);
+  font-weight: 850;
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+.social-link:hover,
+.social-link:focus-visible {
+  color: var(--lime);
+  border-color: rgba(201,255,31,.42);
+  background: rgba(201,255,31,.07);
+}
 .footer-legal {
   margin-top: 36px;
   padding-top: 22px;
@@ -1077,7 +1128,7 @@ button:focus-visible {
   .dashboard-shell { margin-inline: auto; }
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
   .solution-card, .solution-card:nth-child(n) { grid-column: auto; }
-  .benefit-grid, .support-grid, .coach-flow-grid { grid-template-columns: repeat(2, 1fr); }
+  .benefit-grid, .support-grid, .coach-flow-grid, .pricing-faq-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .policy-layout { grid-template-columns: 1fr; }
   .sidebar-nav { position: static; display:grid; grid-template-columns: repeat(2, 1fr); }
@@ -1101,7 +1152,7 @@ button:focus-visible {
   .hero::before, .hero::after, .section-with-lines::before { opacity: .25; right: -420px; }
   .section { padding: 68px 0; }
   .section-header { display:block; }
-  .problem-grid, .split-grid, .pricing-grid, .support-grid, .coach-flow-grid { grid-template-columns: 1fr; }
+  .problem-grid, .split-grid, .pricing-grid, .support-grid, .coach-flow-grid, .pricing-faq-grid { grid-template-columns: 1fr; }
   .connector-line { display:none; }
   .feature-grid { grid-template-columns: 1fr; }
   .showcase-panel { padding: 26px; min-height: 720px; }
