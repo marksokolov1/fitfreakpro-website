@@ -1,6 +1,6 @@
 # FitFreak Pro Website
 
-This is a static launch-ready website for FitFreak Pro.
+This is a static website for FitFreak Pro.
 
 ## Included pages
 
@@ -22,10 +22,4 @@ The website uses root-relative paths like `/assets/css/styles.css`, so it should
 
 ## Notes
 
-The privacy policy and terms content are launch-ready placeholders but should be reviewed by legal counsel before publishing.
-
-## Included Pages
-- `/` landing page
-- `/privacy/` Privacy Policy, effective June 25, 2026
-- `/support/` Support page with categories and FAQs
-- `/terms/` Terms placeholder page
+The privacy policy and terms content should be reviewed by legal counsel before publishing.
