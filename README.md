@@ -5,9 +5,13 @@ This is a static website for FitFreak Pro.
 ## Included pages
 
 - `/` Landing page
+- `/how-it-works/` Coach workflow page
+- `/for-personal-trainers/` Audience page for independent personal trainers
+- `/pricing/` Pricing page
+- `/about/` Founder-led product overview page
 - `/privacy/` Privacy Policy page
 - `/support/` Support page
-- `/terms/` Terms placeholder page for the footer link
+- `/terms/` Terms overview page requiring legal review
 - `/robots.txt` Search crawler instructions
 - `/sitemap.xml` Public indexable route sitemap
 
@@ -28,4 +32,4 @@ No package manager, framework build, test runner, or deployment configuration is
 
 The privacy policy and terms content should be reviewed by legal counsel before publishing.
 
-The Terms page is marked `noindex` while it remains a visible placeholder requiring attorney review.
+The Terms page includes a source-code legal review reminder and should be approved by qualified counsel before being treated as final.
