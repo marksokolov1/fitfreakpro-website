@@ -2034,3 +2034,238 @@ body::after,
     grid-template-columns: 1fr;
   }
 }
+
+/* Header consistency and homepage structure refresh */
+.site-header .container {
+  width: min(1360px, calc(100% - 42px));
+}
+
+.header-inner {
+  justify-content: flex-start;
+  gap: 18px;
+}
+
+.brand {
+  flex: 0 0 auto;
+}
+
+.brand-word {
+  white-space: nowrap;
+}
+
+.main-nav {
+  flex: 0 1 auto;
+  min-width: 0;
+  margin-left: clamp(12px, 2vw, 28px);
+}
+
+.main-nav a {
+  font-size: .86rem;
+  padding-inline: 10px;
+  white-space: nowrap;
+}
+
+.main-nav a[aria-current="page"] {
+  color: var(--lime);
+  background: rgba(201,255,31,.09);
+}
+
+.header-actions {
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+.metrics-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.metric-card,
+.feature-card {
+  border: 1px solid rgba(255,255,255,.11);
+  background: linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
+  border-radius: var(--radius);
+  box-shadow: 0 18px 70px rgba(0,0,0,.22);
+}
+
+.metric-card {
+  min-height: 120px;
+  padding: 22px;
+}
+
+.metric-card strong {
+  display: block;
+  color: var(--lime);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: .95;
+  letter-spacing: -0.06em;
+}
+
+.metric-card span {
+  display: block;
+  margin-top: 10px;
+  color: rgba(255,255,255,.76);
+  font-weight: 850;
+  line-height: 1.25;
+}
+
+.balanced-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.feature-card {
+  min-height: 245px;
+  padding: 24px;
+}
+
+.feature-card h3 {
+  margin: 0;
+  font-size: 1.08rem;
+  letter-spacing: -.035em;
+}
+
+.feature-card p {
+  margin: 12px 0 0;
+  color: rgba(255,255,255,.68);
+  line-height: 1.56;
+}
+
+.split-panel h2 {
+  margin: 0;
+  font-size: clamp(2.15rem, 4vw, 3.8rem);
+  line-height: 1.03;
+  letter-spacing: -.052em;
+}
+
+.split-panel p {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.35vw, 1.14rem);
+  line-height: 1.68;
+}
+
+.check-list {
+  display: grid;
+  gap: 13px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 28px;
+  color: rgba(255,255,255,.82);
+  line-height: 1.55;
+}
+
+.check-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .58em;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--lime);
+  box-shadow: 0 0 14px rgba(201,255,31,.45);
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.pill-row span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border: 1px solid rgba(201,255,31,.22);
+  border-radius: 999px;
+  color: rgba(255,255,255,.84);
+  background: rgba(201,255,31,.055);
+  font-weight: 850;
+}
+
+.pill-row span::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--lime);
+  box-shadow: 0 0 12px var(--lime);
+}
+
+.panel-image {
+  justify-self: center;
+  width: min(100%, 360px);
+  aspect-ratio: 619 / 1100;
+  object-fit: cover;
+  border-radius: 28px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: #050505;
+  box-shadow: 0 22px 90px rgba(0,0,0,.38);
+}
+
+@media (max-width: 1160px) {
+  .site-header .container {
+    width: min(100% - 32px, 1360px);
+  }
+
+  .main-nav {
+    gap: 4px;
+    margin-left: 10px;
+  }
+
+  .main-nav a {
+    font-size: .82rem;
+    padding-inline: 8px;
+  }
+
+  .header-actions .btn {
+    padding-inline: 16px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .main-nav {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 980px) {
+  .metrics-row,
+  .balanced-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header .container {
+    width: min(100% - 30px, 1360px);
+  }
+
+  .metrics-row,
+  .balanced-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-card,
+  .feature-card {
+    min-height: auto;
+  }
+
+  .split-panel h2 {
+    font-size: clamp(2rem, 10vw, 3.1rem);
+  }
+
+  .panel-image,
+  .feature-image {
+    width: min(100%, 280px);
+  }
+}
