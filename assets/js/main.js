@@ -13,7 +13,7 @@ const trackEvent = (eventName, detail = {}) => {
 const normalizeHeaderNavigation = () => {
   const headerCta = document.querySelector('.header-actions .btn-primary');
   if (headerCta) {
-    headerCta.textContent = 'Start Coaching for Free';
+    headerCta.textContent = 'Download the Free Coach App';
     headerCta.setAttribute('href', '/#download');
     headerCta.setAttribute('data-track', 'header_app_download_cta');
   }
