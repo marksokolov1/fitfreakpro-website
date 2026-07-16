@@ -2797,45 +2797,6 @@ body::after,
   opacity: .9;
 }
 
-.tutorial-jumpbar {
-  position: sticky;
-  top: 78px;
-  z-index: 40;
-  border-block: 1px solid rgba(255,255,255,.08);
-  background: rgba(3,4,3,.82);
-  backdrop-filter: blur(16px);
-}
-
-.tutorial-jumpbar-inner {
-  display: flex;
-  gap: 10px;
-  padding-block: 12px;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.tutorial-jumpbar-inner::-webkit-scrollbar {
-  display: none;
-}
-
-.tutorial-jumpbar a {
-  flex: 0 0 auto;
-  padding: 10px 13px;
-  border: 1px solid rgba(255,255,255,.11);
-  border-radius: 999px;
-  color: rgba(255,255,255,.76);
-  background: rgba(255,255,255,.04);
-  font-weight: 850;
-  font-size: .9rem;
-}
-
-.tutorial-jumpbar a:hover,
-.tutorial-jumpbar a:focus-visible {
-  color: var(--lime);
-  border-color: rgba(201,255,31,.34);
-  background: rgba(201,255,31,.07);
-}
-
 .tutorial-journey {
   scroll-margin-top: 146px;
 }
@@ -2972,10 +2933,6 @@ body::after,
   .tutorial-step.is-reverse .tutorial-media {
     order: initial;
   }
-
-  .tutorial-guide-card .cta-actions {
-    justify-content: flex-start;
-  }
 }
 
 @media (max-width: 760px) {
@@ -3003,10 +2960,6 @@ body::after,
     width: min(52%, 190px);
     right: 4%;
     bottom: 4%;
-  }
-
-  .tutorial-jumpbar {
-    top: 78px;
   }
 
   .tutorial-step {
@@ -3041,6 +2994,7 @@ body::after,
     text-align: center;
     line-height: 1.18;
   }
+
 }
 
 @media (max-width: 420px) {
