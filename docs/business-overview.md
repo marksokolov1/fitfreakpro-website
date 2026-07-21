@@ -6,7 +6,7 @@ FitFreak Pro is a fitness coaching utility platform designed to help coaches run
 
 The business is built around a straightforward idea: many fitness coaches still manage clients through scattered tools such as text messages, spreadsheets, shared notes, video links, payment apps, and manual check-ins. This creates friction for both the coach and the client. Coaches lose time managing repetitive tasks, while clients may not have a clear place to follow their workouts, nutrition goals, or progress expectations.
 
-FitFreak Pro solves this by giving coaches a centralized platform for client management and program delivery. Coaches can register for free, create their own library of exercises using their own videos, invite clients to the platform, and begin working with those clients once the client subscription is active. Clients pay $20 per month for access to the app, creating a simple recurring subscription model tied directly to the coach-client relationship.
+FitFreak Pro solves this by giving coaches a centralized platform for client management and program delivery. Coaches can register for free, create their own library of exercises using their own videos, invite clients to the platform, and begin working with those clients once the client subscription is active. Clients pay $12.99 per month for access to the app, creating a simple recurring subscription model tied directly to the coach-client relationship.
 
 FitFreak Pro is not simply a generic fitness app for consumers. It is best positioned as a business tool for coaches that helps them deliver a more professional, organized, and scalable client experience.
 
@@ -29,7 +29,7 @@ Core features include:
 - custom exercise library creation
 - ability for coaches to upload or use their own exercise videos
 - client invitations to the platform
-- client subscription access at $20 per month
+- client subscription access at $12.99 per month
 - client visibility on the coach dashboard after successful payment
 - workout plan assignment
 - workout plans built from the coach's own exercise library
@@ -82,7 +82,7 @@ The strongest value of FitFreak Pro is not just fitness tracking. It is business
 
 FitFreak Pro uses a coach-led subscription model. Coaches can register for free and use the platform to create their own exercise library and invite clients.
 
-Clients pay $20 per month for access to the app. Once the client payment is successful, the coach can see that client on their dashboard and begin working with them.
+Clients pay $12.99 per month for access to the app. Once the client payment is successful, the coach can see that client on their dashboard and begin working with them.
 
 This model creates a low-friction entry point for coaches because they do not have to pay upfront to start using the platform. Instead, revenue is generated when clients subscribe. This aligns the platform's growth with coach adoption and client activation.
 
@@ -109,11 +109,11 @@ The platform can stand out by emphasizing:
 
 ## Revenue Potential
 
-FitFreak Pro has meaningful revenue potential because it is built around recurring monthly subscriptions. At $20 per client per month, revenue can grow as more coaches invite more clients to the platform.
+FitFreak Pro has meaningful revenue potential because it is built around recurring monthly subscriptions. At $12.99 per client per month, revenue can grow as more coaches invite more clients to the platform.
 
 The coach-led model creates an efficient path to growth. Instead of acquiring every client one by one through direct consumer marketing, FitFreak Pro can acquire coaches who each bring multiple clients. A single active coach may represent several monthly subscriptions.
 
-For example, a coach with 10 clients on the platform could represent $200 in monthly recurring revenue. A coach with 25 clients could represent $500 in monthly recurring revenue. As the number of coaches grows, the platform can build a larger base of recurring revenue.
+For example, a coach with 10 clients on the platform could represent $129.90 in monthly recurring revenue. A coach with 25 clients could represent $324.75 in monthly recurring revenue. As the number of coaches grows, the platform can build a larger base of recurring revenue.
 
 This creates a scalable business model because the platform's revenue grows with coach adoption and client retention.
 
@@ -227,6 +227,6 @@ Long term, the platform could expand beyond workout and nutrition management int
 
 FitFreak Pro is best positioned as a utility platform for fitness coaches to run a better coaching business. Its strongest value is not generic fitness content, but the ability for coaches to create their own exercise library, invite clients, assign workouts from their own videos, set nutrition values, and monitor client-submitted parameters.
 
-The platform's growth should be coach-led. Coaches register for free, bring clients into the app, and use FitFreak Pro as the system that supports their client relationships. Clients pay $20 per month, creating a recurring revenue model that scales as coaches add more clients.
+The platform's growth should be coach-led. Coaches register for free, bring clients into the app, and use FitFreak Pro as the system that supports their client relationships. Clients pay $12.99 per month, creating a recurring revenue model that scales as coaches add more clients.
 
 FitFreak Pro's strategic direction should remain focused on helping coaches save time, look more professional, support clients more effectively, and scale their coaching business through a centralized digital platform.
