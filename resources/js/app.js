@@ -1,6 +1,8 @@
 const header = document.querySelector('.site-header');
 const toggle = document.querySelector('.mobile-toggle');
 const nav = document.querySelector('.main-nav');
+const navigationScrim = document.querySelector('[data-navigation-close]');
+const mobileNavigation = window.matchMedia('(max-width: 1040px)');
 let lastFocusedBeforeNav = null;
 
 const trackEvent = (eventName, detail = {}) => {
@@ -10,31 +12,10 @@ const trackEvent = (eventName, detail = {}) => {
   }));
 };
 
-const normalizeHeaderNavigation = () => {
-  const headerCta = document.querySelector('.header-actions .btn-primary');
-  if (headerCta) {
-    headerCta.textContent = 'Download the Free Coach App';
-    headerCta.setAttribute('href', '/#download');
-    headerCta.setAttribute('data-track', 'header_app_download_cta');
-  }
-
-  if (!nav) return;
-
-  const currentPath = window.location.pathname.replace(/\/index\.html$/, '/');
-  nav.querySelectorAll('a').forEach((link) => {
-    link.removeAttribute('aria-current');
-    const linkPath = new URL(link.getAttribute('href'), window.location.origin).pathname;
-    if (linkPath !== '/' && currentPath === linkPath) {
-      link.setAttribute('aria-current', 'page');
-    }
-  });
-};
-
-normalizeHeaderNavigation();
-
 const closeNavigation = () => {
   const wasOpen = header && header.classList.contains('nav-open');
   if (header) header.classList.remove('nav-open');
+  document.body.classList.remove('navigation-open');
   if (toggle) {
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-label', 'Open navigation');
@@ -54,6 +35,7 @@ if (toggle && header) {
     const willOpen = !header.classList.contains('nav-open');
     if (willOpen) lastFocusedBeforeNav = document.activeElement;
     const open = header.classList.toggle('nav-open');
+    document.body.classList.toggle('navigation-open', open);
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
     if (open && nav) {
@@ -61,6 +43,10 @@ if (toggle && header) {
       if (firstLink) firstLink.focus();
     }
   });
+}
+
+if (navigationScrim) {
+  navigationScrim.addEventListener('click', closeNavigation);
 }
 
 document.querySelectorAll('.main-nav a').forEach((link) => {
@@ -77,6 +63,10 @@ document.addEventListener('focusin', (event) => {
   if (!header || !header.classList.contains('nav-open')) return;
   if (header.contains(event.target)) return;
   closeNavigation();
+});
+
+mobileNavigation.addEventListener('change', (event) => {
+  if (!event.matches) closeNavigation();
 });
 
 document.querySelectorAll('.faq-question').forEach((button, index) => {

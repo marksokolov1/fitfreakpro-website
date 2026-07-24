@@ -82,51 +82,21 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
             </div>
           </div>
           <div class="faq-list">
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false"><span>Is FitFreak Pro for coaches or clients?</span><span aria-hidden="true">+</span></button>
-              <div class="faq-answer">FitFreak Pro is built for coaches. Coaches use the platform to manage clients, assign workouts, set nutrition targets, and review client progress. Clients access the app after being invited by their coach.</div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false"><span>Is it free for coaches?</span><span aria-hidden="true">+</span></button>
-              <div class="faq-answer">Yes. Trainers can register for free and start building their exercise library and managing their coaching workflow.</div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false"><span>How much do clients pay?</span><span aria-hidden="true">+</span></button>
-              <div class="faq-answer">Clients pay $12.99/month after being invited by their coach.</div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false"><span>Can coaches use their own exercise videos?</span><span aria-hidden="true">+</span></button>
-              <div class="faq-answer">Yes. FitFreak Pro allows trainers to build their own exercise library and use their own videos.</div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false"><span>Can coaches create their own exercise library?</span><span aria-hidden="true">+</span></button>
-              <div class="faq-answer">Yes. FitFreak Pro is designed so coaches can build and manage their own exercise library instead of relying only on generic templates.</div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false"><span>What can clients do in the app?</span><span aria-hidden="true">+</span></button>
-              <div class="faq-answer">Clients can access coach-assigned workouts, view exercise instructions, follow nutrition targets, and submit progress information for their coach to review.</div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false"><span>Where can I download the app?</span><span aria-hidden="true">+</span></button>
-              <div class="faq-answer">FitFreak Pro is available on the Apple App Store and Google Play Store.
+            <x-ui.faq-item question="Is FitFreak Pro for coaches or clients?">FitFreak Pro is built for coaches. Coaches use the platform to manage clients, assign workouts, set nutrition targets, and review client progress. Clients access the app after being invited by their coach.</x-ui.faq-item>
+            <x-ui.faq-item question="Is it free for coaches?">Yes. Trainers can register for free and start building their exercise library and managing their coaching workflow.</x-ui.faq-item>
+            <x-ui.faq-item question="How much do clients pay?">Clients pay $12.99/month after being invited by their coach.</x-ui.faq-item>
+            <x-ui.faq-item question="Can coaches use their own exercise videos?">Yes. FitFreak Pro allows trainers to build their own exercise library and use their own videos.</x-ui.faq-item>
+            <x-ui.faq-item question="Can coaches create their own exercise library?">Yes. FitFreak Pro is designed so coaches can build and manage their own exercise library instead of relying only on generic templates.</x-ui.faq-item>
+            <x-ui.faq-item question="What can clients do in the app?">Clients can access coach-assigned workouts, view exercise instructions, follow nutrition targets, and submit progress information for their coach to review.</x-ui.faq-item>
+            <x-ui.faq-item question="Where can I download the app?">FitFreak Pro is available on the Apple App Store and Google Play Store.
                 <div class="app-download-inline">
                   <a class="store-badge" href="https://apps.apple.com/us/app/fit-freak-pro/id6742347988" target="_blank" rel="noopener noreferrer" data-track="app_store_click" aria-label="Download FitFreak Pro on the App Store"><span>Download on the<strong>App Store</strong></span></a>
                   <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.duseca.fitfreak" target="_blank" rel="noopener noreferrer" data-track="google_play_click" aria-label="Get FitFreak Pro on Google Play"><span>Get it on<strong>Google Play</strong></span></a>
                 </div>
-              </div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false"><span>Who should I contact for billing or login help?</span><span aria-hidden="true">+</span></button>
-              <div class="faq-answer">Contact support at <a class="email-link" href="mailto:support@fitfreakpro.com" data-track="support_email_click">support@fitfreakpro.com</a>.</div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false"><span>Is FitFreak Pro a medical or healthcare service?</span><span aria-hidden="true">+</span></button>
-              <div class="faq-answer">No. FitFreak Pro is a coaching management platform. It is not a medical provider, healthcare provider, emergency service, or substitute for professional medical advice.</div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false"><span>What should I include when contacting support?</span><span aria-hidden="true">+</span></button>
-              <div class="faq-answer">Please include your name, the email address connected to your FitFreak Pro account, whether you are a coach or client, a clear description of the issue, screenshots if helpful, and your device type, such as iPhone, Android, tablet, or desktop.</div>
-            </article>
+            </x-ui.faq-item>
+            <x-ui.faq-item question="Who should I contact for billing or login help?">Contact support at <a class="email-link" href="mailto:support@fitfreakpro.com" data-track="support_email_click">support@fitfreakpro.com</a>.</x-ui.faq-item>
+            <x-ui.faq-item question="Is FitFreak Pro a medical or healthcare service?">No. FitFreak Pro is a coaching management platform. It is not a medical provider, healthcare provider, emergency service, or substitute for professional medical advice.</x-ui.faq-item>
+            <x-ui.faq-item question="What should I include when contacting support?">Please include your name, the email address connected to your FitFreak Pro account, whether you are a coach or client, a clear description of the issue, screenshots if helpful, and your device type, such as iPhone, Android, tablet, or desktop.</x-ui.faq-item>
           </div>
         </div>
       </section>

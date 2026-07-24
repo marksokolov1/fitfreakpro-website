@@ -110,6 +110,35 @@ test('store and support destinations remain unchanged', function (): void {
         ->assertSee('support@fitfreakpro.com');
 });
 
+test('navigation renders the current page state on the server', function (
+    string $route,
+    string $label
+): void {
+    $this->get(route($route))
+        ->assertOk()
+        ->assertSee('aria-current="page"', escape: false)
+        ->assertSee($label);
+})->with([
+    'home product link' => ['home', 'Product'],
+    'tutorial link' => ['tutorial', 'Tutorial'],
+    'privacy link' => ['privacy', 'Privacy'],
+]);
+
+test('faq controls render stable accessible relationships', function (): void {
+    $this->get(route('home'))
+        ->assertOk()
+        ->assertSee('id="faq-what-is-fitfreak-pro-button"', escape: false)
+        ->assertSee('aria-controls="faq-what-is-fitfreak-pro-answer"', escape: false)
+        ->assertSee('aria-labelledby="faq-what-is-fitfreak-pro-button"', escape: false)
+        ->assertSee('FitFreak Pro is personal trainer software for building an exercise library');
+
+    $this->get(route('support'))
+        ->assertOk()
+        ->assertSee('id="faq-how-much-do-clients-pay-button"', escape: false)
+        ->assertSee('aria-controls="faq-how-much-do-clients-pay-answer"', escape: false)
+        ->assertSee('Clients pay $12.99/month after being invited by their coach.');
+});
+
 test('unknown public pages return not found', function (): void {
     $this->get('/not-a-real-page')->assertNotFound();
 });
