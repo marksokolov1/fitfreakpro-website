@@ -4,8 +4,8 @@
   <img
     class="footer-logo"
     src="{{ asset('assets/img/fitfreak-logo.webp') }}"
-    width="640"
-    height="640"
+    width="1024"
+    height="1024"
     alt="FitFreak Pro logo"
   />
 @else
@@ -13,10 +13,9 @@
     <img
       class="brand-mark"
       src="{{ asset('assets/img/fitfreak-logo.webp') }}"
-      width="640"
-      height="640"
+      width="1024"
+      height="1024"
       alt="FitFreak Pro logo"
     />
-    <span class="brand-word">FitFreak Pro</span>
   </a>
 @endif
