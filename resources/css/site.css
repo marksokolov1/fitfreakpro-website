@@ -152,12 +152,6 @@ button:focus-visible {
   box-shadow: 0 0 28px rgba(201,255,31,0.24);
 }
 
-.brand-word {
-  text-transform: uppercase;
-  color: var(--lime);
-  font-style: italic;
-}
-
 .main-nav {
   display: flex;
   align-items: center;
@@ -2100,10 +2094,6 @@ body::after,
 
 .brand {
   flex: 0 0 auto;
-}
-
-.brand-word {
-  white-space: nowrap;
 }
 
 .main-nav {

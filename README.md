@@ -1,13 +1,31 @@
 # FitFreak Pro Website
 
-This is a static website for FitFreak Pro.
+The FitFreak Pro marketing and support website is a Laravel 12 application rendered with Blade. Its frontend uses Tailwind CSS, Vite, and vanilla JavaScript.
 
-## Included pages
+## Requirements
+
+- PHP 8.2 or newer
+- Composer
+- Node.js and npm
+
+## Local setup
+
+```bash
+composer install
+cp .env.example .env
+php artisan key:generate
+npm ci
+npm run build
+php artisan serve
+```
+
+## Public pages
 
 - `/` Landing page
 - `/how-it-works/` Coach workflow page
 - `/for-personal-trainers/` Audience page for independent personal trainers
 - `/pricing/` Pricing page
+- `/tutorial/` Coach and client tutorial page
 - `/about/` Founder-led product overview page
 - `/privacy/` Privacy Policy page
 - `/support/` Support page
@@ -15,13 +33,18 @@ This is a static website for FitFreak Pro.
 - `/robots.txt` Search crawler instructions
 - `/sitemap.xml` Public indexable route sitemap
 
+## Quality checks
+
+```bash
+composer validate --no-check-publish
+php artisan test
+./vendor/bin/pint --test
+npm run build
+```
+
 ## Deployment
 
-Upload the full contents of this folder to the root of `fitfreakpro.com` using your hosting provider, such as Vercel, Netlify, Cloudflare Pages, GitHub Pages, or a standard web server.
-
-The website uses root-relative paths like `/assets/css/styles.css`, so it should be deployed at the domain root.
-
-No package manager, framework build, test runner, or deployment configuration is included in this repository. The site is plain static HTML, CSS, and vanilla JavaScript.
+Configure the web server document root as `public/`. Install Composer dependencies without development packages, install frontend dependencies with `npm ci`, generate the production assets with `npm run build`, and provide production environment variables outside version control.
 
 ## App links included
 
