@@ -46,6 +46,16 @@ npm run build
 
 Configure the web server document root as `public/`. Install Composer dependencies without development packages, install frontend dependencies with `npm ci`, generate the production assets with `npm run build`, and provide production environment variables outside version control.
 
+### GitHub Pages
+
+GitHub Pages cannot execute Laravel or PHP. Generate the static deployment snapshot before publishing:
+
+```bash
+npm run export:static
+```
+
+The generated root HTML and public asset directories are deployment output. Blade, `resources/css`, and `resources/js` remain the editable source of truth.
+
 ## App links included
 
 - Apple App Store: https://apps.apple.com/us/app/fit-freak-pro/id6742347988
