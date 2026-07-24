@@ -1,0 +1,195 @@
+@php
+$page = json_decode(<<<'PAGE'
+{
+  "title": "Privacy Policy | FitFreak Pro",
+  "description": "Read the FitFreak Pro Privacy Policy for personal trainers and invited clients using the coaching app.",
+  "canonical": "https://fitfreakpro.com/privacy/",
+  "ogTitle": "Privacy Policy | FitFreak Pro",
+  "ogDescription": "Read how FitFreak Pro describes privacy for personal trainers and invited clients using the coaching app.",
+  "ogImage": "https://fitfreakpro.com/assets/img/fitfreak-logo.png",
+  "ogImageWidth": "640",
+  "ogImageHeight": "640",
+  "ogImageAlt": "FitFreak Pro logo",
+  "twitterCard": "summary",
+  "twitterTitle": "Privacy Policy | FitFreak Pro",
+  "twitterDescription": "Read how FitFreak Pro describes privacy for personal trainers and invited clients using the coaching app.",
+  "twitterImage": "https://fitfreakpro.com/assets/img/fitfreak-logo.png",
+  "twitterImageAlt": "FitFreak Pro logo",
+  "schema": "[\n    {\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"WebPage\",\n      \"@id\": \"https://fitfreakpro.com/privacy/#webpage\",\n      \"url\": \"https://fitfreakpro.com/privacy/\",\n      \"name\": \"Privacy Policy | FitFreak Pro\",\n      \"description\": \"Read the FitFreak Pro Privacy Policy for personal trainers and invited clients using the coaching app.\",\n      \"isPartOf\": { \"@id\": \"https://fitfreakpro.com/#website\" },\n      \"about\": { \"@id\": \"https://fitfreakpro.com/#software\" },\n      \"inLanguage\": \"en\"\n    },\n    {\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"BreadcrumbList\",\n      \"itemListElement\": [\n        { \"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://fitfreakpro.com/\" },\n        { \"@type\": \"ListItem\", \"position\": 2, \"name\": \"Privacy Policy\", \"item\": \"https://fitfreakpro.com/privacy/\" }\n      ]\n    }\n  ]"
+}
+PAGE, true, 512, JSON_THROW_ON_ERROR);
+@endphp
+
+<x-layouts.public :page="$page">
+<main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <div class="eyebrow">Privacy Policy</div>
+          <h1>Your privacy, built around coach-client management.</h1>
+          <p>FitFreak Pro respects your privacy. This Privacy Policy explains how FitFreak Pro collects, uses, stores, and shares information when you use our website, mobile app, and coaching platform.</p>
+          <p style="font-size:.95rem;color:rgba(255,255,255,.55);"><strong>Effective Date:</strong> June 25, 2026</p>
+        </div>
+      </section>
+
+      <section class="container policy-layout">
+        <aside class="sidebar-nav" aria-label="Privacy policy sections">
+          <a href="#introduction">Introduction</a>
+          <a href="#information">Information We Collect</a>
+          <a href="#account">Account Information</a>
+          <a href="#coach-client">Coach and Client Data</a>
+          <a href="#workout">Workout, Nutrition, and Progress</a>
+          <a href="#payments">Payment and Subscription Information</a>
+          <a href="#use">How We Use Information</a>
+          <a href="#sharing">How Information Is Shared</a>
+          <a href="#security">Data Security</a>
+          <a href="#retention">Data Retention</a>
+          <a href="#choices">User Choices</a>
+          <a href="#children">Children’s Privacy</a>
+          <a href="#third-party">Third-Party Services</a>
+          <a href="#stores">App Store and Google Play</a>
+          <a href="#changes">Changes to This Policy</a>
+          <a href="#contact">Contact Us</a>
+        </aside>
+
+        <div class="policy-content">
+          <article class="policy-card" id="introduction">
+            <h2>Introduction</h2>
+            <p>FitFreak Pro is personal trainer software built for coaches and trainers who manage clients, create exercise libraries, assign workouts, set nutrition targets, and review client-submitted progress information.</p>
+            <div class="disclaimer-box"><strong>Important:</strong> FitFreak Pro is not a medical provider, healthcare provider, emergency service, or substitute for professional medical advice. Users should not submit emergency, medical, or highly sensitive health information through the platform unless appropriate and permitted.</div>
+          </article>
+
+          <article class="policy-card" id="information">
+            <h2>Information We Collect</h2>
+            <p>We may collect information you provide directly to us, information created through your use of the platform, and limited technical information collected automatically.</p>
+            <p>This may include:</p>
+            <ul>
+              <li>Name</li>
+              <li>Email address</li>
+              <li>Account login information</li>
+              <li>Coach or client profile information</li>
+              <li>Workout plans</li>
+              <li>Exercise library content</li>
+              <li>Exercise videos or video links</li>
+              <li>Nutrition targets</li>
+              <li>Client progress submissions</li>
+              <li>Check-in information</li>
+              <li>Subscription and payment-related information</li>
+              <li>Device, browser, and usage information</li>
+            </ul>
+          </article>
+
+          <article class="policy-card" id="account">
+            <h2>Account Information</h2>
+            <p>When you create an account, we may collect information such as your name, email address, password, role, and account preferences.</p>
+            <p>Coaches may create accounts to manage their coaching business. Clients may access the platform after being invited by their coach.</p>
+          </article>
+
+          <article class="policy-card" id="coach-client">
+            <h2>Coach and Client Data</h2>
+            <p>FitFreak Pro allows coaches to invite clients and manage coaching-related information. Coaches may create or view client information, including assigned workouts, nutrition targets, progress updates, and other information submitted through the platform.</p>
+            <p>Clients understand that information they submit through FitFreak Pro may be visible to their coach for coaching and progress-tracking purposes.</p>
+          </article>
+
+          <article class="policy-card" id="workout">
+            <h2>Workout, Nutrition, and Progress Information</h2>
+            <p>FitFreak Pro may store workout plans, exercise details, exercise videos, nutrition targets, progress check-ins, notes, and related coaching data.</p>
+            <p>This information is used to help coaches organize their coaching process and help clients follow the plans assigned by their coach.</p>
+          </article>
+
+          <article class="policy-card" id="payments">
+            <h2>Payment and Subscription Information</h2>
+            <p>Clients may pay a monthly subscription fee to access FitFreak Pro after being invited by their coach. Payment information may be processed by third-party payment providers.</p>
+            <p>FitFreak Pro does not intentionally store full credit card numbers unless required and handled through a secure payment processor.</p>
+          </article>
+
+          <article class="policy-card" id="use">
+            <h2>How We Use Information</h2>
+            <p>We may use collected information to:</p>
+            <ul>
+              <li>Create and manage user accounts</li>
+              <li>Allow coaches to invite and manage clients</li>
+              <li>Allow clients to access assigned workouts and nutrition targets</li>
+              <li>Process subscriptions and payments</li>
+              <li>Provide customer support</li>
+              <li>Improve platform performance and user experience</li>
+              <li>Monitor usage and prevent abuse</li>
+              <li>Send service-related messages</li>
+              <li>Maintain the security and reliability of the platform</li>
+              <li>Comply with legal obligations</li>
+            </ul>
+          </article>
+
+          <article class="policy-card" id="sharing">
+            <h2>How Information Is Shared</h2>
+            <p>We do not sell your personal information.</p>
+            <p>We may share information only in limited situations, such as:</p>
+            <ul>
+              <li>With coaches, when clients submit information intended for coach review</li>
+              <li>With service providers that help operate the platform</li>
+              <li>With payment processors for billing and subscription management</li>
+              <li>When required by law, regulation, legal process, or government request</li>
+              <li>To protect the rights, safety, and security of FitFreak Pro, users, or others</li>
+              <li>In connection with a business transfer such as a merger, acquisition, or sale of assets</li>
+            </ul>
+          </article>
+
+          <article class="policy-card" id="security">
+            <h2>Data Security</h2>
+            <p>We use reasonable administrative, technical, and organizational measures to help protect information from unauthorized access, loss, misuse, or disclosure.</p>
+            <p>However, no digital platform can guarantee complete security. Users are responsible for keeping account login information confidential.</p>
+          </article>
+
+          <article class="policy-card" id="retention">
+            <h2>Data Retention</h2>
+            <p>We retain information for as long as needed to provide the platform, support user accounts, comply with legal obligations, resolve disputes, and enforce agreements.</p>
+            <p>Users may request account deletion or data assistance by contacting support.</p>
+          </article>
+
+          <article class="policy-card" id="choices">
+            <h2>User Choices</h2>
+            <p>Users may be able to update certain account information directly within the platform.</p>
+            <p>You may contact FitFreak Pro to request help with:</p>
+            <ul>
+              <li>Updating account information</li>
+              <li>Deleting an account</li>
+              <li>Accessing certain personal information</li>
+              <li>Resolving login or subscription issues</li>
+            </ul>
+          </article>
+
+          <article class="policy-card" id="children">
+            <h2>Children’s Privacy</h2>
+            <p>FitFreak Pro is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+            <p>If we learn that a child under 13 has provided personal information, we will take steps to delete it.</p>
+          </article>
+
+          <article class="policy-card" id="third-party">
+            <h2>Third-Party Services</h2>
+            <p>FitFreak Pro may use third-party services for hosting, analytics, payments, app distribution, email, customer support, or other platform operations.</p>
+            <p>These third-party services may collect or process information according to their own privacy policies.</p>
+          </article>
+
+          <article class="policy-card" id="stores">
+            <h2>App Store and Google Play</h2>
+            <p>FitFreak Pro is available through the Apple App Store and Google Play Store. Your use of those stores may be subject to Apple’s and Google’s own terms and privacy policies.</p>
+            <div class="app-download-inline">
+              <a class="store-badge" href="https://apps.apple.com/us/app/fit-freak-pro/id6742347988" target="_blank" rel="noopener noreferrer" data-track="app_store_click" aria-label="Download FitFreak Pro on the App Store"><span>Download on the<strong>App Store</strong></span></a>
+              <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.duseca.fitfreak" target="_blank" rel="noopener noreferrer" data-track="google_play_click" aria-label="Get FitFreak Pro on Google Play"><span>Get it on<strong>Google Play</strong></span></a>
+            </div>
+          </article>
+
+          <article class="policy-card" id="changes">
+            <h2>Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time. When we make changes, we may update the effective date above.</p>
+            <p>Your continued use of FitFreak Pro after changes are posted means you accept the updated Privacy Policy.</p>
+          </article>
+
+          <article class="policy-card" id="contact">
+            <h2>Contact Us</h2>
+            <p>For privacy questions, account support, or data requests, contact us at:</p>
+            <p><a class="email-link" href="mailto:support@fitfreakpro.com" data-track="support_email_click">support@fitfreakpro.com</a></p>
+          </article>
+        </div>
+      </section>
+    </main>
+</x-layouts.public>
