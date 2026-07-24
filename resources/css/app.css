@@ -54,17 +54,56 @@
   display: none;
 }
 
+/* Keep display type confident without letting it overpower the page. */
+.hero h1 {
+  font-size: 4rem;
+  letter-spacing: 0;
+}
+
+.section-title {
+  font-size: 3.25rem;
+  letter-spacing: 0;
+}
+
+.feature-split .split-panel h2 {
+  font-size: 3.25rem;
+  letter-spacing: 0;
+}
+
+.faq-section .section-title {
+  font-size: 4.5rem;
+  letter-spacing: 0;
+}
+
+.tutorial-hero h1 {
+  font-size: 4.5rem;
+  font-weight: 950;
+  letter-spacing: 0;
+}
+
+.tutorial-step h3 {
+  font-size: 3.25rem;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.tutorial-guide-card h2 {
+  font-size: 2.75rem;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
 .route-hero {
-  padding-block: clamp(3.5rem, 6vw, 5.25rem) clamp(2rem, 3.5vw, 3rem);
+  padding-block: 4.5rem 2.75rem;
 }
 
 .route-hero h1 {
   max-width: 62rem;
   margin: 1.25rem 0 0;
-  font-size: clamp(3rem, 5.4vw, 5rem);
+  font-size: 4.25rem;
   font-weight: 950;
-  line-height: 0.98;
-  letter-spacing: -0.05em;
+  line-height: 1.02;
+  letter-spacing: 0;
 }
 
 .route-hero p {
@@ -88,8 +127,197 @@
   margin: 0.75rem 0 0;
 }
 
+.trainer-hero {
+  padding-block: 4rem 3.5rem;
+  overflow: hidden;
+}
+
+.trainer-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(21.25rem, 28.75rem);
+  gap: 5.5rem;
+  align-items: center;
+}
+
+.trainer-hero-copy h1 {
+  max-width: 47.5rem;
+  font-size: 4.5rem;
+  text-wrap: balance;
+}
+
+.trainer-hero-copy p {
+  max-width: 40.625rem;
+  color: rgba(255, 255, 255, 0.72);
+  text-wrap: pretty;
+}
+
+.trainer-hero-copy .cta-actions {
+  margin-top: 1.875rem;
+}
+
+.trainer-hero-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem 1.375rem;
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trainer-hero-points li {
+  position: relative;
+  padding-left: 1.0625rem;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.trainer-hero-points li::before {
+  content: "";
+  position: absolute;
+  top: 0.48em;
+  left: 0;
+  width: 0.4375rem;
+  height: 0.4375rem;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 0.875rem rgba(201, 255, 31, 0.5);
+}
+
+.trainer-hero-visual {
+  position: relative;
+  justify-self: end;
+  width: min(100%, 26.875rem);
+  height: 40.625rem;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 1.75rem;
+  background: #050605;
+  box-shadow: 0 1.75rem 5.625rem rgba(0, 0, 0, 0.42), 0 0 5rem rgba(201, 255, 31, 0.09);
+}
+
+.trainer-hero-visual::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 18%;
+  background: linear-gradient(transparent, #020302);
+  pointer-events: none;
+}
+
+.trainer-hero-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.coach-cards-section {
+  padding-top: 5.5rem;
+}
+
+.coach-section-heading {
+  max-width: 56.25rem;
+  margin-bottom: 2.125rem;
+}
+
+.coach-section-heading h2,
+.coach-gallery-heading h2 {
+  max-width: 47.5rem;
+  margin: 1.125rem 0 0;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.04;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.coach-section-heading p {
+  max-width: 42.5rem;
+  margin: 1.25rem 0 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+
+.coach-card-grid {
+  gap: 0.875rem;
+}
+
 .coach-card-grid .route-card {
-  min-height: 10rem;
+  position: relative;
+  min-height: 0;
+  padding: 1.75rem 1.875rem 1.875rem;
+  overflow: hidden;
+  border-radius: 1.125rem;
+}
+
+.coach-card-grid .route-card::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--lime), transparent 72%);
+  opacity: 0.55;
+}
+
+.route-card-index {
+  display: block;
+  margin-bottom: 1.75rem;
+  color: var(--lime);
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.coach-card-grid h3 {
+  font-size: 1.55rem;
+  letter-spacing: 0;
+}
+
+.coach-card-grid p {
+  max-width: 48ch;
+  margin-top: 0.75rem;
+  color: rgba(255, 255, 255, 0.66);
+  line-height: 1.58;
+}
+
+.coach-gallery-section {
+  padding-top: 5.5rem;
+}
+
+.coach-gallery-heading {
+  margin-bottom: 2rem;
+}
+
+.coach-gallery-heading h2 {
+  font-size: 3.25rem;
+}
+
+.coach-screenshot-grid {
+  display: grid;
+}
+
+.coach-screenshot-grid figure {
+  margin: 0;
+}
+
+.coach-screenshot-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 619 / 980;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 1.125rem;
+  background: #050505;
+  box-shadow: 0 1.125rem 3.5rem rgba(0, 0, 0, 0.28);
+}
+
+.coach-screenshot-grid figcaption {
+  padding: 0.875rem 0.1875rem 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.92rem;
+  font-weight: 800;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -104,6 +332,41 @@
 }
 
 @media (max-width: 1040px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .section-title,
+  .feature-split .split-panel h2 {
+    font-size: 2.8rem;
+  }
+
+  .faq-section .section-title,
+  .tutorial-hero h1 {
+    font-size: 3.6rem;
+  }
+
+  .tutorial-step h3 {
+    font-size: 2.75rem;
+  }
+
+  .route-hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .trainer-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(18.75rem, 22.5rem);
+    gap: 2.5rem;
+  }
+
+  .trainer-hero-copy h1 {
+    font-size: 3.65rem;
+  }
+
+  .trainer-hero-visual {
+    height: 33.75rem;
+  }
+
   .site-header .header-inner {
     position: relative;
     z-index: 3;
@@ -144,6 +407,107 @@
   }
 }
 
+@media (max-width: 900px) {
+  .trainer-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trainer-hero-copy {
+    max-width: 47.5rem;
+  }
+
+  .trainer-hero-visual {
+    justify-self: start;
+    width: min(100%, 24.375rem);
+    height: 33.125rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero h1 {
+    font-size: 2.75rem;
+  }
+
+  .section-title,
+  .feature-split .split-panel h2 {
+    font-size: 2.35rem;
+  }
+
+  .faq-section .section-title {
+    font-size: 2.5rem;
+  }
+
+  .tutorial-hero h1,
+  .route-hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .tutorial-step h3 {
+    font-size: 2.25rem;
+  }
+
+  .tutorial-guide-card h2 {
+    font-size: 2.15rem;
+  }
+
+  .trainer-hero {
+    padding-block: 2.625rem 2.125rem;
+  }
+
+  .trainer-hero-grid {
+    gap: 2.125rem;
+  }
+
+  .trainer-hero-copy h1 {
+    font-size: 2.85rem;
+  }
+
+  .trainer-hero-copy .cta-actions {
+    align-items: stretch;
+  }
+
+  .trainer-hero-copy .btn {
+    width: 100%;
+  }
+
+  .trainer-hero-points {
+    display: grid;
+    gap: 0.625rem;
+  }
+
+  .trainer-hero-visual {
+    width: 100%;
+    height: min(118vw, 32.5rem);
+    border-radius: 1.375rem;
+  }
+
+  .coach-section-heading h2,
+  .coach-gallery-heading h2 {
+    font-size: 2.5rem;
+  }
+
+  .coach-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .coach-card-grid .route-card {
+    padding: 1.5rem;
+  }
+
+  .route-card-index {
+    margin-bottom: 1.375rem;
+  }
+
+  .coach-screenshot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .coach-screenshot-grid figcaption {
+    font-size: 0.8rem;
+  }
+}
+
 @media (max-width: 430px) {
   .brand {
     width: 10.25rem;
@@ -155,7 +519,11 @@
   }
 
   .route-hero h1 {
-    font-size: clamp(2.45rem, 12vw, 3.35rem);
+    font-size: 2.5rem;
+  }
+
+  .trainer-hero-copy h1 {
+    font-size: 2.55rem;
   }
 }
 
@@ -169,7 +537,7 @@
   }
 
   .redesign-hero h1 {
-    font-size: 4.75rem;
+    font-size: 4rem;
     letter-spacing: 0;
   }
 }
