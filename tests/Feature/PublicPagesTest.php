@@ -41,7 +41,7 @@ test('public pages render their preserved titles and primary headings', function
     'tutorial' => [
         'tutorial',
         'How to Use FitFreak Pro - Coach and Client Guide',
-        'How to Use FitFreak Pro',
+        'Start using FitFreak Pro in minutes.',
     ],
     'about' => [
         'about',
@@ -118,6 +118,23 @@ test('tutorial links to both professional guides and preserved product media', f
         ->assertSee('data-tutorial-nav="coach-guide"', escape: false)
         ->assertSee('data-tutorial-nav="client-guide"', escape: false)
         ->assertSeeInOrder(['Trainer Guide', 'Client Guide'])
+        ->assertSeeInOrder([
+            'Create your coach account',
+            'Build your exercise library',
+            'Create and assign client programs',
+            'Invite your clients',
+            'Set nutrition targets and review progress',
+        ])
+        ->assertSeeInOrder([
+            'Create your client account',
+            'Enter your coach invitation code',
+            'Activate your FitFreak Pro subscription through Stripe',
+            'Open your assigned plan',
+            'Follow workouts, exercise instructions, nutrition targets, and submit progress',
+        ])
+        ->assertSee('Start Free as a Trainer')
+        ->assertSee('Enter Invitation Code')
+        ->assertDontSee('Organize your calendar')
         ->assertSee(asset('downloads/fitfreak-pro-coach-guide-en.pdf'), escape: false)
         ->assertSee(asset('downloads/fitfreak-pro-client-guide-en.pdf'), escape: false)
         ->assertSee(asset('images/tutorial/client/03-stripe.png'), escape: false)

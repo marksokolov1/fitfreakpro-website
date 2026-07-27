@@ -848,16 +848,17 @@
 }
 
 .tutorial-page .tutorial-hero-phone {
+  aspect-ratio: 1242 / 2688;
   border-radius: 1.375rem;
 }
 
 .tutorial-page .tutorial-hero-phone-primary {
-  width: min(68%, 15.5rem);
+  width: min(62%, 13.5rem);
   left: 8%;
 }
 
 .tutorial-page .tutorial-hero-phone-secondary {
-  width: min(52%, 12rem);
+  width: min(46%, 10rem);
   right: 6%;
   bottom: 2%;
   opacity: 0.68;
@@ -987,6 +988,11 @@
   line-height: 1.04;
   letter-spacing: 0;
   text-wrap: balance;
+}
+
+.tutorial-page .tutorial-step .tutorial-step-title-long {
+  font-size: 2.35rem;
+  line-height: 1.06;
 }
 
 .tutorial-page .tutorial-step p {
@@ -1548,7 +1554,7 @@
   }
 
   .tutorial-page .tutorial-hero h1 {
-    font-size: 2.8rem;
+    font-size: 2.55rem;
   }
 
   .tutorial-page .tutorial-role-selector {
@@ -1567,11 +1573,11 @@
   }
 
   .tutorial-page .tutorial-hero-phone-primary {
-    width: min(68%, 11.5rem);
+    width: min(60%, 9.5rem);
   }
 
   .tutorial-page .tutorial-hero-phone-secondary {
-    width: min(50%, 8.5rem);
+    width: min(45%, 7.25rem);
   }
 
   .tutorial-path-nav {
@@ -1618,6 +1624,10 @@
     margin-top: 1rem;
     font-size: 1.9rem;
     line-height: 1.08;
+  }
+
+  .tutorial-page .tutorial-step .tutorial-step-title-long {
+    font-size: 1.65rem;
   }
 
   .tutorial-page .tutorial-step p {

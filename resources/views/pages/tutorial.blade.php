@@ -26,19 +26,19 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
         <div class="container tutorial-hero-grid">
           <div class="tutorial-hero-copy">
             <div class="eyebrow">FitFreak Pro - User Guide</div>
-            <h1>How to Use FitFreak Pro</h1>
-            <p>Follow the essential steps for coaches or clients. For detailed instructions on every feature, download the complete PDF guide.</p>
-            <div class="hero-actions tutorial-role-selector" aria-label="Choose coach or client instructions">
-              <a class="btn btn-primary" href="#coach-guide" data-track="tutorial_coach_jump">I'm a Coach</a>
+            <h1>Start using FitFreak Pro in minutes.</h1>
+            <p>Follow the complete trainer and client workflow from account creation to assigned workouts, nutrition targets, and progress tracking.</p>
+            <div class="hero-actions tutorial-role-selector" aria-label="Choose trainer or client instructions">
+              <a class="btn btn-primary" href="#coach-guide" data-track="tutorial_coach_jump">I'm a Trainer</a>
               <a class="btn btn-secondary" href="#client-guide" data-track="tutorial_client_jump">I'm a Client</a>
             </div>
           </div>
-          <div class="tutorial-hero-visual" aria-label="FitFreak Pro coach app screens">
+          <div class="tutorial-hero-visual" aria-label="FitFreak Pro trainer and client app screens">
             <figure class="phone-shot tutorial-hero-phone tutorial-hero-phone-primary">
-              <img src="{{ asset('assets/img/app-screen-1.webp') }}" width="619" height="1100" alt="FitFreak Pro coach dashboard for managing clients, workouts, nutrition, and progress" loading="eager" />
+              <img src="{{ asset('images/tutorial/coach/02-exercise-library.png') }}" width="1242" height="2688" alt="FitFreak Pro trainer exercise library for building client programs" loading="eager" />
             </figure>
             <figure class="phone-shot tutorial-hero-phone tutorial-hero-phone-secondary">
-              <img src="{{ asset('assets/img/app-screen-11.webp') }}" width="619" height="1100" alt="FitFreak Pro coach calendar screen with schedule blocks" loading="eager" />
+              <img src="{{ asset('images/tutorial/client/04-client-dashboard.png') }}" width="1242" height="2688" alt="FitFreak Pro client dashboard with an assigned workout and nutrition targets" loading="eager" />
             </figure>
           </div>
         </div>
@@ -55,9 +55,9 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
       <section class="section tutorial-journey tutorial-journey-trainer" id="coach-guide">
         <div class="container section-header">
           <div>
-            <div class="section-kicker">For Coaches</div>
-            <h2 class="section-title">Start managing clients in one place.</h2>
-            <p class="section-copy">Create your free coach account, build your own exercise library, and organize client programming, nutrition targets, and availability from one app.</p>
+            <div class="section-kicker">Trainer Guide</div>
+            <h2 class="section-title">Create and manage client programs.</h2>
+            <p class="section-copy">For personal trainers creating and managing client programs.</p>
           </div>
         </div>
         <div class="container tutorial-step-list">
@@ -65,7 +65,7 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
             <div class="tutorial-step-copy">
               <span class="tutorial-step-number">01</span>
               <h3>Create your coach account</h3>
-              <p>Select the Trainer role, enter your contact details, and complete your professional profile. Coach registration is free.</p>
+              <p>Create the trainer account you will use to manage clients. Add your contact details and professional profile so clients can recognize who is delivering their plan.</p>
             </div>
             <figure class="tutorial-media">
               <img src="{{ asset('images/tutorial/coach/01-create-coach-account.png') }}" width="1242" height="2688" alt="Coach account creation screen in FitFreak Pro" loading="lazy" />
@@ -75,7 +75,7 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
             <div class="tutorial-step-copy">
               <span class="tutorial-step-number">02</span>
               <h3>Build your exercise library</h3>
-              <p>Create sections for training types or muscle groups. Add your own exercises, explanations, images, and videos so clients receive your coaching content.</p>
+              <p>Build the exercise library you will use in client programs. Add your own exercises, instructions, images, and videos so every assignment reflects how you coach.</p>
             </div>
             <figure class="tutorial-media">
               <img src="{{ asset('images/tutorial/coach/02-exercise-library.png') }}" width="1242" height="2688" alt="Coach exercise library with custom exercise sections" loading="lazy" />
@@ -84,41 +84,31 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
           <article class="tutorial-step">
             <div class="tutorial-step-copy">
               <span class="tutorial-step-number">03</span>
-              <h3>Invite a client</h3>
-              <p>Open Invitations, enter the client's name and email, and send the invitation. The client receives the information needed to connect with your coach profile.</p>
-            </div>
-            <figure class="tutorial-media">
-              <img src="{{ asset('images/tutorial/coach/03-invite-client.png') }}" width="1242" height="2688" alt="Client invitation form in the FitFreak Pro coach workflow" loading="lazy" />
-            </figure>
-          </article>
-          <article class="tutorial-step is-reverse">
-            <div class="tutorial-step-copy">
-              <span class="tutorial-step-number">04</span>
-              <h3>Create and assign a workout program</h3>
-              <p>Build training days from exercises in your library. Set the weight, time, sets, or repetitions, save the program, and assign it to the appropriate client.</p>
+              <h3>Create and assign client programs</h3>
+              <p>Create a program from exercises in your library, set weight, time, sets, or repetitions, and assign it to the appropriate client. This gives each client a clear plan to follow.</p>
             </div>
             <figure class="tutorial-media">
               <img src="{{ asset('images/tutorial/coach/04-create-program.png') }}" width="1242" height="2688" alt="Workout program creation screen for assigning exercises to a client" loading="lazy" />
             </figure>
           </article>
+          <article class="tutorial-step is-reverse">
+            <div class="tutorial-step-copy">
+              <span class="tutorial-step-number">04</span>
+              <h3>Invite your clients</h3>
+              <p>Send each client an invitation from your trainer account. The invitation gives the client the code needed to connect their account with your coaching.</p>
+            </div>
+            <figure class="tutorial-media">
+              <img src="{{ asset('images/tutorial/coach/03-invite-client.png') }}" width="1242" height="2688" alt="Client invitation form in the FitFreak Pro trainer workflow" loading="lazy" />
+            </figure>
+          </article>
           <article class="tutorial-step">
             <div class="tutorial-step-copy">
               <span class="tutorial-step-number">05</span>
-              <h3>Set nutrition targets</h3>
-              <p>Open the client record and set daily goals for calories, carbohydrates, protein, fat, and water.</p>
+              <h3>Set nutrition targets and review progress</h3>
+              <p>Set the client’s daily calorie, macro, and water targets, then review the workouts, nutrition, parameters, and progress they submit. This gives you the information needed to adjust the plan over time.</p>
             </div>
             <figure class="tutorial-media">
               <img src="{{ asset('images/tutorial/coach/05-set-nutrition-targets.png') }}" width="1242" height="2688" alt="Coach nutrition target setup screen for a client" loading="lazy" />
-            </figure>
-          </article>
-          <article class="tutorial-step is-reverse">
-            <div class="tutorial-step-copy">
-              <span class="tutorial-step-number">06</span>
-              <h3>Organize your calendar</h3>
-              <p>Add availability or schedule blocks by date and time so your working hours stay organized alongside client programs and data.</p>
-            </div>
-            <figure class="tutorial-media">
-              <img src="{{ asset('images/tutorial/coach/06-coach-calendar.png') }}" width="1242" height="2688" alt="FitFreak Pro coach calendar with schedule blocks" loading="lazy" />
             </figure>
           </article>
         </div>
@@ -127,12 +117,12 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
       <section class="tutorial-guide-band tutorial-guide-band-trainer" id="coach-pdf">
         <div class="container">
           <article class="tutorial-guide-card">
-            <div class="section-kicker">Coach PDF</div>
-            <h2>Need the complete instructions?</h2>
-            <p>The full guide covers account setup, profile details, exercise libraries, client invitations, workout programs, nutrition targets, client parameters, calendar management, and settings.</p>
+            <div class="section-kicker">Trainer next step</div>
+            <h2>Ready to build your coaching workflow?</h2>
+            <p>For optional detailed instructions, the full guide covers account setup, profile details, exercise libraries, client invitations, workout programs, nutrition targets, client parameters, and settings.</p>
             <div class="cta-actions">
-              <a class="btn btn-primary" href="{{ asset('downloads/fitfreak-pro-coach-guide-en.pdf') }}" target="_blank" rel="noopener noreferrer" download data-track="coach_pdf_download">Download the Full Coach Guide (PDF)</a>
-              <a class="btn btn-secondary" href="{{ route('home') }}#download" data-track="tutorial_coach_app_download">Download the coach app</a>
+              <a class="btn btn-primary" href="{{ route('home') }}#download" data-track="tutorial_coach_app_download">Start Free as a Trainer</a>
+              <a class="btn btn-secondary" href="{{ asset('downloads/fitfreak-pro-coach-guide-en.pdf') }}" target="_blank" rel="noopener noreferrer" download data-track="coach_pdf_download">Download the Full Coach Guide (PDF)</a>
             </div>
           </article>
         </div>
@@ -141,9 +131,9 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
       <section class="section tutorial-journey tutorial-journey-client" id="client-guide">
         <div class="container section-header">
           <div>
-            <div class="section-kicker">For Clients</div>
-            <h2 class="section-title">Follow the plan created by your coach.</h2>
-            <p class="section-copy">Connect using your coach's invitation code, activate access through Stripe, and use the app to follow workouts, nutrition targets, and progress check-ins.</p>
+            <div class="section-kicker">Client Guide</div>
+            <h2 class="section-title">Join your trainer and follow your plan.</h2>
+            <p class="section-copy">For clients joining their trainer and following assigned plans.</p>
           </div>
         </div>
         <div class="container tutorial-step-list">
@@ -151,7 +141,7 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
             <div class="tutorial-step-copy">
               <span class="tutorial-step-number">01</span>
               <h3>Create your client account</h3>
-              <p>During registration, select Regular user, verify your email, and complete the basic profile information requested by the app.</p>
+              <p>Create the client account you will use to receive your plan. Select Regular user, verify your email, and complete your profile so the account is ready to connect with your trainer.</p>
             </div>
             <figure class="tutorial-media">
               <img src="{{ asset('images/tutorial/client/01-create-client-account.png') }}" width="1242" height="2688" alt="Client account registration screen in FitFreak Pro" loading="lazy" />
@@ -161,7 +151,7 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
             <div class="tutorial-step-copy">
               <span class="tutorial-step-number">02</span>
               <h3>Enter your coach invitation code</h3>
-              <p>Enter the unique code supplied by your coach. This connects your account with the coach who will assign workouts and nutrition targets.</p>
+              <p>Enter the invitation code supplied by your coach. This connects your client account with the trainer responsible for assigning your workouts and nutrition targets.</p>
             </div>
             <figure class="tutorial-media">
               <img src="{{ asset('images/tutorial/client/02-enter-coach-code.png') }}" width="1242" height="2688" alt="Client screen for entering a coach invitation code" loading="lazy" />
@@ -170,8 +160,8 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
           <article class="tutorial-step">
             <div class="tutorial-step-copy">
               <span class="tutorial-step-number">03</span>
-              <h3>Activate access through Stripe</h3>
-              <p>Review the current subscription information in the app, continue to Stripe Checkout, and complete payment using an available payment method.</p>
+              <h3>Activate your FitFreak Pro subscription through Stripe</h3>
+              <p>Review the subscription information in the app and complete payment through Stripe Checkout. Activation opens the digital coaching experience your trainer uses to deliver your plan.</p>
             </div>
             <figure class="tutorial-media">
               <img src="{{ asset('images/tutorial/client/03-stripe.png') }}?v=20260721-price" width="798" height="1727" alt="Stripe Checkout screen showing the $12.99 FitFreak Pro client subscription" loading="lazy" />
@@ -181,7 +171,7 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
             <div class="tutorial-step-copy">
               <span class="tutorial-step-number">04</span>
               <h3>Open your assigned plan</h3>
-              <p>After activation, the Dashboard displays your current workout and the nutrition goals set by your coach.</p>
+              <p>Open the Dashboard after activation to see the current workout and nutrition goals assigned by your trainer. This keeps the plan you need to follow clear and accessible.</p>
             </div>
             <figure class="tutorial-media">
               <img src="{{ asset('images/tutorial/client/04-client-dashboard.png') }}" width="1242" height="2688" alt="Client dashboard showing an assigned workout and nutrition goals" loading="lazy" />
@@ -190,21 +180,11 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
           <article class="tutorial-step">
             <div class="tutorial-step-copy">
               <span class="tutorial-step-number">05</span>
-              <h3>Follow your coach's exercise instructions</h3>
-              <p>Open an exercise to review the assigned sets, repetitions, weight, or time, and watch the demonstration video before training.</p>
+              <h3 class="tutorial-step-title-long">Follow workouts, exercise instructions, nutrition targets, and submit progress</h3>
+              <p>Complete the workouts assigned by your trainer, review exercise demonstrations and instructions, follow nutrition and water targets, and submit progress. This gives your trainer the information needed to review your plan over time.</p>
             </div>
             <figure class="tutorial-media">
               <img src="{{ asset('images/tutorial/client/05-exercise-video.png') }}" width="1242" height="2688" alt="Client exercise detail screen with video and workout instructions" loading="lazy" />
-            </figure>
-          </article>
-          <article class="tutorial-step is-reverse">
-            <div class="tutorial-step-copy">
-              <span class="tutorial-step-number">06</span>
-              <h3>Track nutrition and progress</h3>
-              <p>Review your daily targets, add meals and water, and submit progress information that your coach can use to adjust your plan.</p>
-            </div>
-            <figure class="tutorial-media">
-              <img src="{{ asset('images/tutorial/client/06-nutrition.png') }}" width="1242" height="2688" alt="Client nutrition screen for tracking meals, water, and daily targets" loading="lazy" />
             </figure>
           </article>
         </div>
@@ -213,28 +193,14 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
       <section class="tutorial-guide-band tutorial-guide-band-client" id="client-pdf">
         <div class="container">
           <article class="tutorial-guide-card">
-            <div class="section-kicker">Client PDF</div>
-            <h2>Explore the complete client experience</h2>
-            <p>The full guide covers registration, Stripe activation, assigned workouts, exercise videos, progress summaries, check-in photos, nutrition, foods, recipes, your coach's profile, and account settings.</p>
+            <div class="section-kicker">Client next step</div>
+            <h2>Ready to join your coach?</h2>
+            <p>For optional detailed instructions, the full guide covers registration, Stripe activation, assigned workouts, exercise videos, progress summaries, check-in photos, nutrition, foods, recipes, your coach's profile, and account settings.</p>
             <div class="cta-actions">
-              <a class="btn btn-primary" href="{{ asset('downloads/fitfreak-pro-client-guide-en.pdf') }}" target="_blank" rel="noopener noreferrer" download data-track="client_pdf_download">Download the Full Client Guide (PDF)</a>
+              <a class="btn btn-primary" href="{{ route('home') }}#download" data-track="tutorial_client_app_download">Enter Invitation Code</a>
+              <a class="btn btn-secondary" href="{{ asset('downloads/fitfreak-pro-client-guide-en.pdf') }}" target="_blank" rel="noopener noreferrer" download data-track="client_pdf_download">Download the Full Client Guide (PDF)</a>
             </div>
           </article>
-        </div>
-      </section>
-
-      <section class="section final-cta">
-        <div class="container cta-panel">
-          <h2>Ready to get started?</h2>
-          <p>Coaches can register for free. Clients join FitFreak Pro after receiving an invitation from their coach.</p>
-          <div class="cta-actions">
-            <a class="btn btn-primary" href="{{ route('home') }}#download" data-track="tutorial_final_download">Download the App</a>
-            <a class="btn btn-secondary" href="mailto:support@fitfreakpro.com" data-track="support_click">Contact Support</a>
-          </div>
-          <div class="store-row">
-            <a class="store-badge" href="https://apps.apple.com/us/app/fit-freak-pro/id6742347988" target="_blank" rel="noopener noreferrer" data-track="app_store_click" aria-label="Download FitFreak Pro on the App Store"><span>Download on the<strong>App Store</strong></span></a>
-            <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.duseca.fitfreak" target="_blank" rel="noopener noreferrer" data-track="google_play_click" aria-label="Get FitFreak Pro on Google Play"><span>Get it on<strong>Google Play</strong></span></a>
-          </div>
         </div>
       </section>
     </main>
