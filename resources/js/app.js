@@ -55,6 +55,21 @@ document.querySelectorAll('.main-nav a').forEach((link) => {
   });
 });
 
+const syncSectionNavigation = () => {
+  const currentSection = window.location.hash.slice(1);
+
+  document.querySelectorAll('[data-section-nav]').forEach((link) => {
+    if (link.getAttribute('data-section-nav') === currentSection) {
+      link.setAttribute('aria-current', 'location');
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  });
+};
+
+syncSectionNavigation();
+window.addEventListener('hashchange', syncSectionNavigation);
+
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') closeNavigation();
 });

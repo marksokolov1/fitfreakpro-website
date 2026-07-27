@@ -2108,7 +2108,8 @@ body::after,
   white-space: nowrap;
 }
 
-.main-nav a[aria-current="page"] {
+.main-nav a[aria-current="page"],
+.main-nav a[aria-current="location"] {
   color: var(--lime);
   background: rgba(201,255,31,.09);
 }

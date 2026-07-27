@@ -4,10 +4,10 @@
 
     <nav id="primary-navigation" class="main-nav" aria-label="Primary navigation">
       <a href="{{ route('how-it-works') }}" @if (request()->routeIs('how-it-works')) aria-current="page" @endif>How It Works</a>
-      <a href="{{ route('home') }}#features" @if (request()->routeIs('home')) aria-current="page" @endif>Features</a>
+      <a href="{{ route('home') }}#features" data-section-nav="features">Features</a>
       <a href="{{ route('pricing') }}" @if (request()->routeIs('pricing')) aria-current="page" @endif>Pricing</a>
       <a href="{{ route('tutorial') }}" @if (request()->routeIs('tutorial')) aria-current="page" @endif>Tutorial</a>
-      <a href="{{ route('home') }}#faq">FAQ</a>
+      <a href="{{ route('home') }}#faq" data-section-nav="faq">FAQ</a>
       <a class="mobile-nav-cta" href="{{ route('home') }}#download" data-track="header_app_download_cta">Start Free</a>
     </nav>
 

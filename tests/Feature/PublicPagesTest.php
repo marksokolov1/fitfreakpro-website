@@ -119,10 +119,19 @@ test('navigation renders the current page state on the server', function (
         ->assertSee('aria-current="page"', escape: false)
         ->assertSee($label);
 })->with([
-    'home features link' => ['home', 'Features'],
+    'how it works link' => ['how-it-works', 'How It Works'],
     'tutorial link' => ['tutorial', 'Tutorial'],
     'privacy link' => ['privacy', 'Privacy'],
 ]);
+
+test('homepage section navigation is not highlighted before a section is selected', function (): void {
+    $this->get(route('home'))
+        ->assertOk()
+        ->assertSee('data-section-nav="features"', escape: false)
+        ->assertSee('data-section-nav="faq"', escape: false)
+        ->assertDontSee('data-section-nav="features" aria-current', escape: false)
+        ->assertDontSee('data-section-nav="faq" aria-current', escape: false);
+});
 
 test('faq controls render stable accessible relationships', function (): void {
     $this->get(route('home'))
