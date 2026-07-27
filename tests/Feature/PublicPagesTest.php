@@ -133,6 +133,15 @@ test('homepage section navigation is not highlighted before a section is selecte
         ->assertDontSee('data-section-nav="faq" aria-current', escape: false);
 });
 
+test('how it works uses clean product screenshots for every workflow step', function (): void {
+    $this->get(route('how-it-works'))
+        ->assertOk()
+        ->assertSee('images/tutorial/coach/01-create-coach-account.png', escape: false)
+        ->assertSee('images/tutorial/coach/02-exercise-library.png', escape: false)
+        ->assertSee('images/tutorial/coach/03-invite-client.png', escape: false)
+        ->assertSee('images/tutorial/coach/04-create-program.png', escape: false);
+});
+
 test('faq controls render stable accessible relationships', function (): void {
     $this->get(route('home'))
         ->assertOk()
