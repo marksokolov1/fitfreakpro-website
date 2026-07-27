@@ -933,6 +933,14 @@
   left: 8%;
 }
 
+.tutorial-page .tutorial-hero-phone-dashboard img {
+  width: 179.4%;
+  max-width: none;
+  height: 146.7%;
+  object-fit: fill;
+  transform: translate(-22.9%, -31.8%);
+}
+
 .tutorial-page .tutorial-hero-phone-secondary {
   width: min(46%, 10rem);
   right: 6%;

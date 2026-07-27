@@ -45,8 +45,8 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
             </ul>
           </div>
           <div class="tutorial-hero-visual" aria-label="FitFreak Pro trainer and client app screens">
-            <figure class="phone-shot tutorial-hero-phone tutorial-hero-phone-primary">
-              <img src="{{ asset('images/tutorial/coach/02-exercise-library.png') }}" width="1242" height="2688" alt="FitFreak Pro trainer exercise library for building client programs" loading="eager" />
+            <figure class="phone-shot tutorial-hero-phone tutorial-hero-phone-primary tutorial-hero-phone-dashboard">
+              <img src="{{ asset('assets/img/app-screen-1.webp') }}" width="619" height="1100" alt="FitFreak Pro trainer dashboard showing clients and their current coaching details" loading="eager" />
             </figure>
             <figure class="phone-shot tutorial-hero-phone tutorial-hero-phone-secondary">
               <img src="{{ asset('images/tutorial/client/04-client-dashboard.png') }}" width="1242" height="2688" alt="FitFreak Pro client dashboard with an assigned workout and nutrition targets" loading="eager" />
