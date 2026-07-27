@@ -26,7 +26,7 @@ test('public pages render their preserved titles and primary headings', function
     'how it works' => [
         'how-it-works',
         'How FitFreak Pro Works for Personal Trainers | FitFreak Pro',
-        'From coach registration to a clear client plan.',
+        'From your coaching method to one clear client experience.',
     ],
     'personal trainers' => [
         'for-personal-trainers',
@@ -141,6 +141,14 @@ test('how it works uses clean product screenshots for every workflow step', func
         ->assertSee('Invite a client')
         ->assertSee('Assign their program')
         ->assertSee('Review and adjust')
+        ->assertSee('Add your experience, specialization, certifications, and coaching approach.')
+        ->assertSee('Add your own exercises, demonstration videos, instructions, and coaching cues.')
+        ->assertSee('Send an invitation so the client can create an account, activate access, and connect with your coaching.')
+        ->assertSee('Choose a saved program or create a new one, then set exercises, repetitions, weight or time, and nutrition targets.')
+        ->assertSee('Review workouts, nutrition, parameters, and submitted progress, then update the plan over time.')
+        ->assertSee('See how FitFreak Pro fits the way you coach.')
+        ->assertSee('Start Free as a Coach')
+        ->assertSee('Book a Product Walkthrough')
         ->assertSee('images/tutorial/coach/01-create-coach-account.png', escape: false)
         ->assertSee('images/tutorial/coach/02-exercise-library.png', escape: false)
         ->assertSee('images/tutorial/coach/03-invite-client.png', escape: false)
