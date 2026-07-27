@@ -26,13 +26,14 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
         <div class="container hero-grid">
           <div class="hero-copy-wrap">
             <div class="eyebrow">Personal trainer software built around your coaching</div>
-            <h1>Your coaching. Your exercises. <span class="lime-text">One clear plan for every client.</span></h1>
-            <p class="hero-copy">Build your own exercise library, use your own videos, assign personalized workouts, set nutrition targets, and review client progress without managing everything through spreadsheets, notes, and endless messages.</p>
+            <h1>Your coaching. Your exercises. <span class="lime-text">One clear experience for every client.</span></h1>
+            <p class="hero-copy">Build your own exercise library, use your own videos, assign personalized programs, set nutrition targets, and review client progress without relying on spreadsheets and endless messages.</p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#download" data-track="hero_app_download_cta">Download the Free Coach App</a>
+              <a class="btn btn-primary hero-primary-cta" href="#download" data-track="hero_app_download_cta">Create Your Free Coach Account</a>
               <a class="btn btn-secondary" href="#workflow" data-track="see_workflow_click">See How It Works</a>
             </div>
             <p class="download-label">$0 monthly coach account. Available on iPhone and Android.</p>
+            <p class="hero-differentiator">Built around your coaching, not an algorithm.</p>
           </div>
           <div class="product-shot-grid" aria-label="FitFreak Pro product screenshots">
             <figure class="phone-shot phone-shot-primary">
@@ -94,7 +95,8 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
         </div>
       </section>
 
-      <section class="section feature-split home-feature home-feature-primary" id="coach-owned-content">
+      <section class="section feature-split home-feature home-feature-primary" id="features">
+        <span id="coach-owned-content" class="legacy-anchor" aria-hidden="true"></span>
         <div class="container split-panel">
           <div>
             <div class="section-kicker">Coach Your Way</div>
@@ -225,7 +227,7 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
           <h2>Bring your coaching process into one organized app.</h2>
           <p>See how FitFreak Pro can organize the work you currently manage through spreadsheets, notes, video links, and messages.</p>
           <div class="cta-actions">
-            <a class="btn btn-primary" href="#download" data-track="hero_app_download_cta">Download the Free Coach App</a>
+            <a class="btn btn-primary" href="#download" data-track="hero_app_download_cta">Start Free</a>
             <a class="btn btn-secondary" href="mailto:support@fitfreakpro.com?subject=FitFreak%20Pro%20walkthrough" data-track="founder_walkthrough_click">Request a Product Walkthrough</a>
           </div>
         </div>

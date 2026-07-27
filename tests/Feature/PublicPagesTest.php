@@ -119,7 +119,7 @@ test('navigation renders the current page state on the server', function (
         ->assertSee('aria-current="page"', escape: false)
         ->assertSee($label);
 })->with([
-    'home product link' => ['home', 'Product'],
+    'home features link' => ['home', 'Features'],
     'tutorial link' => ['tutorial', 'Tutorial'],
     'privacy link' => ['privacy', 'Privacy'],
 ]);
