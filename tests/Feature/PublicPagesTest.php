@@ -89,6 +89,22 @@ test('pricing is consistent across public content and structured metadata', func
         ->assertDontSee('$20');
 });
 
+test('pricing presents the trainer and client offers as one connected sequence', function (): void {
+    $this->get(route('pricing'))
+        ->assertOk()
+        ->assertSeeInOrder([
+            'Trainer creates a free account',
+            'Invites a client',
+            'Client activates access',
+            'Coach account',
+            'Invited client access',
+        ])
+        ->assertSee('<span>$0</span><small>per month</small>', escape: false)
+        ->assertSee('<span>$12.99</span><small>per month</small>', escape: false)
+        ->assertSee('https://apps.apple.com/us/app/fit-freak-pro/id6742347988', escape: false)
+        ->assertSee('https://play.google.com/store/apps/details?id=com.duseca.fitfreak', escape: false);
+});
+
 test('tutorial links to both professional guides and preserved product media', function (): void {
     $this->get(route('tutorial'))
         ->assertOk()
