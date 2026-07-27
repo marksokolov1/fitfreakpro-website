@@ -70,6 +70,40 @@ const syncSectionNavigation = () => {
 syncSectionNavigation();
 window.addEventListener('hashchange', syncSectionNavigation);
 
+const tutorialGuideLinks = [...document.querySelectorAll('[data-tutorial-nav]')];
+const tutorialGuideSections = tutorialGuideLinks
+  .map((link) => document.getElementById(link.getAttribute('data-tutorial-nav')))
+  .filter(Boolean);
+
+const setCurrentTutorialGuide = (sectionId) => {
+  tutorialGuideLinks.forEach((link) => {
+    if (link.getAttribute('data-tutorial-nav') === sectionId) {
+      link.setAttribute('aria-current', 'location');
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  });
+};
+
+if (tutorialGuideSections.length) {
+  setCurrentTutorialGuide(window.location.hash === '#client-guide' ? 'client-guide' : 'coach-guide');
+
+  if ('IntersectionObserver' in window) {
+    const tutorialObserver = new IntersectionObserver((entries) => {
+      const visibleSection = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (visibleSection) setCurrentTutorialGuide(visibleSection.target.id);
+    }, {
+      rootMargin: '-28% 0px -58% 0px',
+      threshold: [0, 0.1, 0.25]
+    });
+
+    tutorialGuideSections.forEach((section) => tutorialObserver.observe(section));
+  }
+}
+
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') closeNavigation();
 });

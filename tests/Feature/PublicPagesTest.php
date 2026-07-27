@@ -114,6 +114,10 @@ test('pricing presents the trainer and client offers as one connected sequence',
 test('tutorial links to both professional guides and preserved product media', function (): void {
     $this->get(route('tutorial'))
         ->assertOk()
+        ->assertSee('Tutorial guide navigation')
+        ->assertSee('data-tutorial-nav="coach-guide"', escape: false)
+        ->assertSee('data-tutorial-nav="client-guide"', escape: false)
+        ->assertSeeInOrder(['Trainer Guide', 'Client Guide'])
         ->assertSee(asset('downloads/fitfreak-pro-coach-guide-en.pdf'), escape: false)
         ->assertSee(asset('downloads/fitfreak-pro-client-guide-en.pdf'), escape: false)
         ->assertSee(asset('images/tutorial/client/03-stripe.png'), escape: false)

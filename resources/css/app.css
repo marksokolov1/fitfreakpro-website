@@ -806,6 +806,275 @@
   color: rgba(255, 255, 255, 0.62);
 }
 
+.tutorial-page .tutorial-hero {
+  padding-block: 3.25rem 2.75rem;
+}
+
+.tutorial-page .tutorial-hero-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(22rem, 26rem);
+  gap: 3rem;
+}
+
+.tutorial-page .tutorial-hero h1 {
+  max-width: 46rem;
+  font-size: 4.15rem;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.tutorial-page .tutorial-hero p {
+  margin-top: 1.125rem;
+}
+
+.tutorial-page .tutorial-role-selector {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 0.375rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.125rem;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.tutorial-page .tutorial-role-selector .btn {
+  min-width: 10.5rem;
+  min-height: 3.25rem;
+  border-radius: 0.875rem;
+}
+
+.tutorial-page .tutorial-hero-visual {
+  min-height: 28.5rem;
+}
+
+.tutorial-page .tutorial-hero-phone {
+  border-radius: 1.375rem;
+}
+
+.tutorial-page .tutorial-hero-phone-primary {
+  width: min(68%, 15.5rem);
+  left: 8%;
+}
+
+.tutorial-page .tutorial-hero-phone-secondary {
+  width: min(52%, 12rem);
+  right: 6%;
+  bottom: 2%;
+  opacity: 0.68;
+}
+
+.tutorial-path-nav {
+  position: sticky;
+  z-index: 90;
+  top: 4.875rem;
+  border-block: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(5, 6, 5, 0.9);
+  backdrop-filter: blur(18px);
+}
+
+.tutorial-path-nav-inner {
+  display: flex;
+  min-height: 4rem;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tutorial-path-nav-inner > span {
+  margin-right: auto;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tutorial-path-nav a {
+  padding: 0.7rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.88rem;
+  font-weight: 850;
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.tutorial-path-nav a:hover,
+.tutorial-path-nav a:focus-visible,
+.tutorial-path-nav a[aria-current="location"] {
+  border-color: rgba(201, 255, 31, 0.24);
+  color: var(--lime);
+  background: rgba(201, 255, 31, 0.075);
+}
+
+.tutorial-page .tutorial-journey {
+  padding-block: 4rem 2rem;
+  scroll-margin-top: 8.875rem;
+}
+
+.tutorial-page .tutorial-journey-trainer {
+  background:
+    linear-gradient(90deg, rgba(201, 255, 31, 0.032), transparent 56%),
+    #030403;
+}
+
+.tutorial-page .tutorial-journey-client {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  background:
+    linear-gradient(270deg, rgba(201, 255, 31, 0.025), transparent 58%),
+    rgba(255, 255, 255, 0.012);
+}
+
+.tutorial-page .tutorial-journey .section-header {
+  margin-bottom: 1.5rem;
+}
+
+.tutorial-page .tutorial-journey .section-header > div {
+  max-width: 57rem;
+}
+
+.tutorial-page .tutorial-journey .section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(201, 255, 31, 0.22);
+  border-radius: 999px;
+  background: rgba(201, 255, 31, 0.055);
+}
+
+.tutorial-page .tutorial-journey .section-kicker::before {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 0.875rem rgba(201, 255, 31, 0.5);
+}
+
+.tutorial-page .tutorial-journey .section-title {
+  font-size: 3.25rem;
+  line-height: 1.02;
+}
+
+.tutorial-page .tutorial-step-list {
+  gap: 1rem;
+}
+
+.tutorial-page .tutorial-step {
+  min-height: 38rem;
+  grid-template-columns: minmax(0, 1fr) 18rem;
+  gap: 3rem;
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+}
+
+.tutorial-page .tutorial-step.is-reverse {
+  grid-template-columns: 18rem minmax(0, 1fr);
+}
+
+.tutorial-page .tutorial-step-copy {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tutorial-page .tutorial-step h3 {
+  max-width: 38rem;
+  margin-top: 1.25rem;
+  font-size: 2.75rem;
+  line-height: 1.04;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.tutorial-page .tutorial-step p {
+  max-width: 39rem;
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.62;
+}
+
+.tutorial-page .tutorial-media {
+  width: 16.5rem;
+  height: 35rem;
+  aspect-ratio: auto;
+  border-radius: 1.25rem;
+}
+
+.tutorial-page .tutorial-guide-band {
+  padding-block: 0 3.5rem;
+}
+
+.tutorial-page .tutorial-guide-band-trainer {
+  background:
+    linear-gradient(90deg, rgba(201, 255, 31, 0.032), transparent 56%),
+    #030403;
+}
+
+.tutorial-page .tutorial-guide-band-client {
+  background:
+    linear-gradient(270deg, rgba(201, 255, 31, 0.025), transparent 58%),
+    rgba(255, 255, 255, 0.012);
+}
+
+.tutorial-page .tutorial-guide-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.625rem 2rem;
+  align-items: center;
+  padding: 1.75rem 2rem;
+  border-color: rgba(201, 255, 31, 0.2);
+  border-radius: 1.125rem;
+  background:
+    linear-gradient(90deg, rgba(201, 255, 31, 0.065), transparent 48%),
+    rgba(255, 255, 255, 0.035);
+}
+
+.tutorial-page .tutorial-guide-card .section-kicker,
+.tutorial-page .tutorial-guide-card h2,
+.tutorial-page .tutorial-guide-card p {
+  grid-column: 1;
+}
+
+.tutorial-page .tutorial-guide-card h2 {
+  font-size: 2rem;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.tutorial-page .tutorial-guide-card p {
+  max-width: 52rem;
+  margin-top: 0.25rem;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.tutorial-page .tutorial-guide-card .cta-actions {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  align-self: center;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0;
+}
+
+.tutorial-page .tutorial-guide-card .btn {
+  width: 100%;
+  min-width: 17rem;
+  text-align: center;
+}
+
+.tutorial-page .final-cta {
+  padding-block: 3.5rem;
+}
+
+.tutorial-page .final-cta .cta-panel {
+  padding: 2.5rem;
+  border-radius: 1.375rem;
+}
+
 .pricing-page .route-hero {
   padding-block: 4rem 2.25rem;
 }
@@ -1084,6 +1353,42 @@
 }
 
 @media (max-width: 1040px) {
+  .tutorial-page .tutorial-hero-grid,
+  .tutorial-page .tutorial-step,
+  .tutorial-page .tutorial-step.is-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .tutorial-page .tutorial-hero-visual {
+    width: min(100%, 31rem);
+    min-height: 27rem;
+    margin-inline: auto;
+  }
+
+  .tutorial-page .tutorial-step {
+    min-height: 0;
+  }
+
+  .tutorial-page .tutorial-step.is-reverse .tutorial-media {
+    order: initial;
+  }
+
+  .tutorial-page .tutorial-media {
+    width: 16rem;
+    height: 34rem;
+  }
+
+  .tutorial-page .tutorial-guide-card {
+    grid-template-columns: 1fr;
+  }
+
+  .tutorial-page .tutorial-guide-card .cta-actions {
+    grid-column: 1;
+    grid-row: auto;
+    align-items: flex-start;
+    margin-top: 0.75rem;
+  }
+
   .how-it-works-page .workflow-timeline {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1238,6 +1543,121 @@
 }
 
 @media (max-width: 760px) {
+  .tutorial-page .tutorial-hero {
+    padding-block: 2.25rem 2rem;
+  }
+
+  .tutorial-page .tutorial-hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .tutorial-page .tutorial-role-selector {
+    display: grid;
+    width: 100%;
+  }
+
+  .tutorial-page .tutorial-role-selector .btn {
+    min-width: 0;
+    padding-inline: 1rem;
+  }
+
+  .tutorial-page .tutorial-hero-visual {
+    width: min(100%, 22rem);
+    min-height: 20.5rem;
+  }
+
+  .tutorial-page .tutorial-hero-phone-primary {
+    width: min(68%, 11.5rem);
+  }
+
+  .tutorial-page .tutorial-hero-phone-secondary {
+    width: min(50%, 8.5rem);
+  }
+
+  .tutorial-path-nav {
+    top: 4.5rem;
+  }
+
+  .tutorial-path-nav-inner {
+    min-height: 3.5rem;
+  }
+
+  .tutorial-path-nav-inner > span {
+    display: none;
+  }
+
+  .tutorial-path-nav a {
+    flex: 1;
+    text-align: center;
+  }
+
+  .tutorial-page .tutorial-journey {
+    padding-block: 2.75rem 1.25rem;
+    scroll-margin-top: 8rem;
+  }
+
+  .tutorial-page .tutorial-journey .section-header {
+    margin-bottom: 1.125rem;
+  }
+
+  .tutorial-page .tutorial-journey .section-title {
+    font-size: 2.35rem;
+  }
+
+  .tutorial-page .tutorial-step {
+    gap: 1.5rem;
+    padding: 1.375rem;
+    border-radius: 1.125rem;
+  }
+
+  .tutorial-page .tutorial-step-copy {
+    min-height: 0;
+  }
+
+  .tutorial-page .tutorial-step h3 {
+    margin-top: 1rem;
+    font-size: 1.9rem;
+    line-height: 1.08;
+  }
+
+  .tutorial-page .tutorial-step p {
+    font-size: 1rem;
+  }
+
+  .tutorial-page .tutorial-media {
+    width: 14rem;
+    height: 30rem;
+    border-radius: 1rem;
+  }
+
+  .tutorial-page .tutorial-guide-band {
+    padding-bottom: 2.5rem;
+  }
+
+  .tutorial-page .tutorial-guide-card {
+    padding: 1.5rem;
+  }
+
+  .tutorial-page .tutorial-guide-card h2 {
+    font-size: 1.75rem;
+  }
+
+  .tutorial-page .tutorial-guide-card .cta-actions {
+    align-items: stretch;
+  }
+
+  .tutorial-page .tutorial-guide-card .btn {
+    min-width: 0;
+  }
+
+  .tutorial-page .final-cta {
+    padding-block: 2.5rem;
+  }
+
+  .tutorial-page .final-cta .cta-panel {
+    padding: 1.5rem;
+  }
+
   .pricing-page .route-hero {
     padding-block: 2.75rem 1.75rem;
   }

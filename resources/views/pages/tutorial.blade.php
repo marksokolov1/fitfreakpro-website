@@ -21,14 +21,14 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
 @endphp
 
 <x-layouts.public :page="$page">
-<main id="main">
+<main id="main" class="tutorial-page">
       <section class="tutorial-hero">
         <div class="container tutorial-hero-grid">
           <div class="tutorial-hero-copy">
             <div class="eyebrow">FitFreak Pro - User Guide</div>
             <h1>How to Use FitFreak Pro</h1>
             <p>Follow the essential steps for coaches or clients. For detailed instructions on every feature, download the complete PDF guide.</p>
-            <div class="hero-actions">
+            <div class="hero-actions tutorial-role-selector" aria-label="Choose coach or client instructions">
               <a class="btn btn-primary" href="#coach-guide" data-track="tutorial_coach_jump">I'm a Coach</a>
               <a class="btn btn-secondary" href="#client-guide" data-track="tutorial_client_jump">I'm a Client</a>
             </div>
@@ -44,7 +44,15 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
         </div>
       </section>
 
-      <section class="section tutorial-journey" id="coach-guide">
+      <nav class="tutorial-path-nav" aria-label="Tutorial guide navigation">
+        <div class="container tutorial-path-nav-inner">
+          <span>Choose a guide</span>
+          <a href="#coach-guide" data-tutorial-nav="coach-guide">Trainer Guide</a>
+          <a href="#client-guide" data-tutorial-nav="client-guide">Client Guide</a>
+        </div>
+      </nav>
+
+      <section class="section tutorial-journey tutorial-journey-trainer" id="coach-guide">
         <div class="container section-header">
           <div>
             <div class="section-kicker">For Coaches</div>
@@ -116,7 +124,7 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
         </div>
       </section>
 
-      <section class="tutorial-guide-band" id="coach-pdf">
+      <section class="tutorial-guide-band tutorial-guide-band-trainer" id="coach-pdf">
         <div class="container">
           <article class="tutorial-guide-card">
             <div class="section-kicker">Coach PDF</div>
@@ -130,7 +138,7 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
         </div>
       </section>
 
-      <section class="section tutorial-journey" id="client-guide">
+      <section class="section tutorial-journey tutorial-journey-client" id="client-guide">
         <div class="container section-header">
           <div>
             <div class="section-kicker">For Clients</div>
@@ -202,7 +210,7 @@ PAGE, true, 512, JSON_THROW_ON_ERROR);
         </div>
       </section>
 
-      <section class="tutorial-guide-band" id="client-pdf">
+      <section class="tutorial-guide-band tutorial-guide-band-client" id="client-pdf">
         <div class="container">
           <article class="tutorial-guide-card">
             <div class="section-kicker">Client PDF</div>
