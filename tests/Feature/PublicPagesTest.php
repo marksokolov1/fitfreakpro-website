@@ -35,7 +35,7 @@ test('public pages render their preserved titles and primary headings', function
     ],
     'pricing' => [
         'pricing',
-        'FitFreak Pro Pricing for Coaches and Clients',
+        'FitFreak Pro Pricing for Trainers and Clients',
         'Simple pricing built around the trainer-client relationship.',
     ],
     'tutorial' => [
@@ -96,9 +96,15 @@ test('pricing presents the trainer and client offers as one connected sequence',
             'Trainer creates a free account',
             'Invites a client',
             'Client activates access',
-            'Coach account',
-            'Invited client access',
+            'Trainer account',
+            'Client coaching experience',
         ])
+        ->assertSee('Create your coaching system with no monthly trainer platform fee. Clients activate their FitFreak Pro experience after receiving an invitation from their trainer.')
+        ->assertSee('Build and deliver your coaching through FitFreak Pro without a monthly trainer platform fee.')
+        ->assertSee('Clients activate the personalized digital coaching experience their trainer delivers through FitFreak Pro.')
+        ->assertSee('Why does the client subscribe separately?')
+        ->assertSee('Start Free as a Trainer')
+        ->assertSee('Book a Product Walkthrough')
         ->assertSee('<span>$0</span><small>per month</small>', escape: false)
         ->assertSee('<span>$12.99</span><small>per month</small>', escape: false)
         ->assertSee('https://apps.apple.com/us/app/fit-freak-pro/id6742347988', escape: false)
