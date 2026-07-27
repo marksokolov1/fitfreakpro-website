@@ -827,9 +827,10 @@
 }
 
 .tutorial-page .tutorial-role-selector {
-  display: inline-grid;
+  display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.5rem;
+  width: min(100%, 43rem);
+  gap: 0.625rem;
   margin-top: 1.5rem;
   padding: 0.375rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -837,10 +838,85 @@
   background: rgba(255, 255, 255, 0.035);
 }
 
-.tutorial-page .tutorial-role-selector .btn {
-  min-width: 10.5rem;
-  min-height: 3.25rem;
+.tutorial-page .tutorial-role-option {
+  display: flex;
+  min-width: 0;
+  min-height: 5.25rem;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.275rem;
+  padding: 0.875rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.875rem;
+  color: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.025);
+  transition: border-color 160ms ease, color 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.tutorial-page .tutorial-role-option strong {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.tutorial-page .tutorial-role-option span {
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.tutorial-page .tutorial-role-option:hover,
+.tutorial-page .tutorial-role-option:focus-visible {
+  border-color: rgba(201, 255, 31, 0.5);
+  color: #fff;
+}
+
+.tutorial-page .tutorial-role-option[aria-current="location"] {
+  border-color: rgba(201, 255, 31, 0.72);
+  color: rgba(3, 4, 3, 0.78);
+  background: var(--lime);
+  box-shadow: 0 0 1.75rem rgba(201, 255, 31, 0.16);
+}
+
+.tutorial-page .tutorial-role-option[aria-current="location"] strong {
+  color: #030403;
+}
+
+.tutorial-page .tutorial-role-option:focus-visible,
+.tutorial-path-nav a:focus-visible,
+.tutorial-page .tutorial-guide-card .btn:focus-visible,
+.tutorial-page .tutorial-resource-links a:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.tutorial-page .tutorial-trust-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.78rem;
+  font-weight: 750;
+  line-height: 1.45;
+  list-style: none;
+}
+
+.tutorial-page .tutorial-trust-list li {
+  position: relative;
+  padding-left: 0.9rem;
+}
+
+.tutorial-page .tutorial-trust-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.48em;
+  left: 0;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 0.65rem rgba(201, 255, 31, 0.42);
 }
 
 .tutorial-page .tutorial-hero-visual {
@@ -874,28 +950,34 @@
 }
 
 .tutorial-path-nav-inner {
-  display: flex;
-  min-height: 4rem;
+  display: grid;
+  min-height: 4.5rem;
+  grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
-.tutorial-path-nav-inner > span {
-  margin-right: auto;
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 0.78rem;
-  font-weight: 850;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.tutorial-guide-switch {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.025);
 }
 
 .tutorial-path-nav a {
-  padding: 0.7rem 1rem;
+  display: inline-flex;
+  min-height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 0.8rem;
   border: 1px solid transparent;
-  border-radius: 0.75rem;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.88rem;
+  border-radius: 0.625rem;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.8rem;
   font-weight: 850;
+  white-space: nowrap;
   transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
 }
 
@@ -905,6 +987,54 @@
   border-color: rgba(201, 255, 31, 0.24);
   color: var(--lime);
   background: rgba(201, 255, 31, 0.075);
+}
+
+.tutorial-progress-links {
+  display: none;
+  min-width: 0;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.125rem;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  list-style: none;
+}
+
+.tutorial-progress-links::-webkit-scrollbar {
+  display: none;
+}
+
+.tutorial-progress-links.is-active {
+  display: flex;
+}
+
+.tutorial-progress-links a {
+  position: relative;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.tutorial-progress-links a::before {
+  content: "";
+  width: 0.35rem;
+  height: 0.35rem;
+  margin-right: 0.45rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  transition: background 160ms ease, box-shadow 160ms ease;
+}
+
+.tutorial-progress-links a:hover,
+.tutorial-progress-links a:focus-visible,
+.tutorial-progress-links a[aria-current="step"] {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.tutorial-progress-links a[aria-current="step"]::before {
+  background: var(--lime);
+  box-shadow: 0 0 0.75rem rgba(201, 255, 31, 0.55);
 }
 
 .tutorial-page .tutorial-journey {
@@ -968,6 +1098,7 @@
   gap: 3rem;
   padding: 2.5rem;
   border-radius: 1.25rem;
+  scroll-margin-top: 9.75rem;
 }
 
 .tutorial-page .tutorial-step.is-reverse {
@@ -998,8 +1129,24 @@
 .tutorial-page .tutorial-step p {
   max-width: 39rem;
   margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.76);
   font-size: 1.05rem;
   line-height: 1.62;
+}
+
+.tutorial-page .tutorial-step .tutorial-step-why {
+  max-width: 36rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(201, 255, 31, 0.16);
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.tutorial-page .tutorial-step-why strong {
+  color: var(--lime);
+  font-weight: 850;
 }
 
 .tutorial-page .tutorial-media {
@@ -1053,6 +1200,7 @@
 .tutorial-page .tutorial-guide-card p {
   max-width: 52rem;
   margin-top: 0.25rem;
+  color: rgba(255, 255, 255, 0.74);
   font-size: 0.98rem;
   line-height: 1.55;
 }
@@ -1070,6 +1218,69 @@
   width: 100%;
   min-width: 17rem;
   text-align: center;
+}
+
+.tutorial-page .tutorial-resource-band {
+  padding-block: 0 3.5rem;
+  background:
+    linear-gradient(270deg, rgba(201, 255, 31, 0.025), transparent 58%),
+    rgba(255, 255, 255, 0.012);
+}
+
+.tutorial-page .tutorial-resource-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.tutorial-page .tutorial-resource-card h2 {
+  margin-top: 0.25rem;
+  font-size: 1.6rem;
+  line-height: 1.12;
+}
+
+.tutorial-page .tutorial-resource-card p {
+  margin-top: 0.35rem;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.92rem;
+}
+
+.tutorial-page .tutorial-resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.tutorial-page .tutorial-resource-links a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.625rem 0.875rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0.75rem;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 0.86rem;
+  font-weight: 800;
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.tutorial-page .tutorial-resource-links a span[aria-hidden="true"] {
+  color: var(--lime);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+}
+
+.tutorial-page .tutorial-resource-links a:hover {
+  border-color: rgba(201, 255, 31, 0.38);
+  color: #fff;
+  background: rgba(201, 255, 31, 0.055);
 }
 
 .tutorial-page .final-cta {
@@ -1395,6 +1606,18 @@
     margin-top: 0.75rem;
   }
 
+  .tutorial-path-nav-inner {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .tutorial-progress-links {
+    justify-content: flex-start;
+  }
+
+  .tutorial-page .tutorial-resource-card {
+    align-items: flex-start;
+  }
+
   .how-it-works-page .workflow-timeline {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1562,9 +1785,17 @@
     width: 100%;
   }
 
-  .tutorial-page .tutorial-role-selector .btn {
-    min-width: 0;
-    padding-inline: 1rem;
+  .tutorial-page .tutorial-role-option {
+    min-height: 5.75rem;
+    padding-inline: 0.8rem;
+  }
+
+  .tutorial-page .tutorial-role-option strong {
+    font-size: 0.92rem;
+  }
+
+  .tutorial-page .tutorial-role-option span {
+    font-size: 0.75rem;
   }
 
   .tutorial-page .tutorial-hero-visual {
@@ -1585,21 +1816,36 @@
   }
 
   .tutorial-path-nav-inner {
-    min-height: 3.5rem;
+    min-height: 6.25rem;
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+    padding-block: 0.45rem;
   }
 
-  .tutorial-path-nav-inner > span {
-    display: none;
+  .tutorial-guide-switch {
+    width: 100%;
   }
 
-  .tutorial-path-nav a {
+  .tutorial-guide-switch a {
     flex: 1;
     text-align: center;
   }
 
+  .tutorial-progress-links {
+    width: 100%;
+    justify-content: flex-start;
+    padding-bottom: 0.1rem;
+  }
+
+  .tutorial-progress-links a {
+    min-height: 2.1rem;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.73rem;
+  }
+
   .tutorial-page .tutorial-journey {
     padding-block: 2.75rem 1.25rem;
-    scroll-margin-top: 8rem;
+    scroll-margin-top: 11rem;
   }
 
   .tutorial-page .tutorial-journey .section-header {
@@ -1614,6 +1860,7 @@
     gap: 1.5rem;
     padding: 1.375rem;
     border-radius: 1.125rem;
+    scroll-margin-top: 11.5rem;
   }
 
   .tutorial-page .tutorial-step-copy {
@@ -1632,6 +1879,10 @@
 
   .tutorial-page .tutorial-step p {
     font-size: 1rem;
+  }
+
+  .tutorial-page .tutorial-step .tutorial-step-why {
+    font-size: 0.84rem;
   }
 
   .tutorial-page .tutorial-media {
@@ -1658,6 +1909,30 @@
 
   .tutorial-page .tutorial-guide-card .btn {
     min-width: 0;
+  }
+
+  .tutorial-page .tutorial-resource-band {
+    padding-bottom: 2.5rem;
+  }
+
+  .tutorial-page .tutorial-resource-card {
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.375rem;
+  }
+
+  .tutorial-page .tutorial-resource-card h2 {
+    font-size: 1.45rem;
+  }
+
+  .tutorial-page .tutorial-resource-links {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .tutorial-page .tutorial-resource-links a {
+    flex: 1;
+    justify-content: center;
   }
 
   .tutorial-page .final-cta {

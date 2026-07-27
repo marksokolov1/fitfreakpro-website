@@ -71,11 +71,17 @@ syncSectionNavigation();
 window.addEventListener('hashchange', syncSectionNavigation);
 
 const tutorialGuideLinks = [...document.querySelectorAll('[data-tutorial-nav]')];
+const tutorialRoleLinks = [...document.querySelectorAll('[data-tutorial-role]')];
+const tutorialProgressGroups = [...document.querySelectorAll('[data-tutorial-progress]')];
+const tutorialStepLinks = [...document.querySelectorAll('[data-tutorial-step-link]')];
 const tutorialGuideSections = tutorialGuideLinks
   .map((link) => document.getElementById(link.getAttribute('data-tutorial-nav')))
   .filter(Boolean);
+let currentTutorialGuideId = 'coach-guide';
 
 const setCurrentTutorialGuide = (sectionId) => {
+  currentTutorialGuideId = sectionId;
+
   tutorialGuideLinks.forEach((link) => {
     if (link.getAttribute('data-tutorial-nav') === sectionId) {
       link.setAttribute('aria-current', 'location');
@@ -83,25 +89,95 @@ const setCurrentTutorialGuide = (sectionId) => {
       link.removeAttribute('aria-current');
     }
   });
+
+  tutorialRoleLinks.forEach((link) => {
+    if (link.getAttribute('data-tutorial-role') === sectionId) {
+      link.setAttribute('aria-current', 'location');
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  });
+
+  tutorialProgressGroups.forEach((group) => {
+    const isActive = group.getAttribute('data-tutorial-progress') === sectionId;
+    group.classList.toggle('is-active', isActive);
+    group.setAttribute('aria-hidden', String(!isActive));
+
+    if (isActive && !group.querySelector('[aria-current="step"]')) {
+      const firstStep = group.querySelector('[data-tutorial-step-link]');
+      if (firstStep) firstStep.setAttribute('aria-current', 'step');
+    }
+  });
+};
+
+const setCurrentTutorialStep = (stepId) => {
+  let activeStepLink = null;
+
+  tutorialStepLinks.forEach((link) => {
+    if (link.getAttribute('data-tutorial-step-link') === stepId) {
+      link.setAttribute('aria-current', 'step');
+      activeStepLink = link;
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  });
+
+  const step = document.getElementById(stepId);
+  const guide = step ? step.closest('.tutorial-journey') : null;
+  if (guide) setCurrentTutorialGuide(guide.id);
+  if (activeStepLink) {
+    activeStepLink.scrollIntoView({ block: 'nearest', inline: 'center' });
+  }
+};
+
+const syncCurrentTutorialStep = () => {
+  const activationLine = Math.min(window.innerHeight * 0.36, 320);
+  const activeGuide = tutorialGuideSections
+    .filter((section) => section.getBoundingClientRect().top <= activationLine)
+    .at(-1) || tutorialGuideSections[0];
+
+  if (activeGuide && activeGuide.id !== currentTutorialGuideId) {
+    setCurrentTutorialGuide(activeGuide.id);
+  }
+
+  const guide = document.getElementById(currentTutorialGuideId);
+  if (!guide) return;
+
+  const guideSteps = [...guide.querySelectorAll('[data-tutorial-step-section]')];
+  const visibleSteps = guideSteps.filter((step) => {
+    const bounds = step.getBoundingClientRect();
+    return bounds.top <= activationLine && bounds.bottom > 150;
+  });
+
+  if (visibleSteps.length) {
+    setCurrentTutorialStep(visibleSteps[visibleSteps.length - 1].id);
+  }
 };
 
 if (tutorialGuideSections.length) {
-  setCurrentTutorialGuide(window.location.hash === '#client-guide' ? 'client-guide' : 'coach-guide');
+  const initialTutorialTarget = document.getElementById(window.location.hash.slice(1));
+  const initialTutorialGuide = initialTutorialTarget
+    ? initialTutorialTarget.closest('.tutorial-journey')
+    : null;
 
-  if ('IntersectionObserver' in window) {
-    const tutorialObserver = new IntersectionObserver((entries) => {
-      const visibleSection = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-      if (visibleSection) setCurrentTutorialGuide(visibleSection.target.id);
-    }, {
-      rootMargin: '-28% 0px -58% 0px',
-      threshold: [0, 0.1, 0.25]
-    });
-
-    tutorialGuideSections.forEach((section) => tutorialObserver.observe(section));
+  setCurrentTutorialGuide(initialTutorialGuide ? initialTutorialGuide.id : 'coach-guide');
+  if (initialTutorialTarget && initialTutorialTarget.matches('[data-tutorial-step-section]')) {
+    setCurrentTutorialStep(initialTutorialTarget.id);
   }
+
+  let tutorialStepSyncFrame = null;
+  const scheduleTutorialStepSync = () => {
+    if (tutorialStepSyncFrame) return;
+    tutorialStepSyncFrame = window.requestAnimationFrame(() => {
+      tutorialStepSyncFrame = null;
+      syncCurrentTutorialStep();
+    });
+  };
+
+  window.addEventListener('scroll', scheduleTutorialStepSync, { passive: true });
+  window.addEventListener('resize', scheduleTutorialStepSync);
+  window.addEventListener('hashchange', scheduleTutorialStepSync);
+  window.addEventListener('load', scheduleTutorialStepSync);
 }
 
 document.addEventListener('keydown', (event) => {

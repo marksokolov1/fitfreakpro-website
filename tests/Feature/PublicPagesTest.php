@@ -117,6 +117,10 @@ test('tutorial links to both professional guides and preserved product media', f
         ->assertSee('Tutorial guide navigation')
         ->assertSee('data-tutorial-nav="coach-guide"', escape: false)
         ->assertSee('data-tutorial-nav="client-guide"', escape: false)
+        ->assertSee('data-tutorial-progress="coach-guide"', escape: false)
+        ->assertSee('data-tutorial-progress="client-guide"', escape: false)
+        ->assertSeeInOrder(['Account', 'Exercise Library', 'Programs', 'Invite Clients', 'Progress'])
+        ->assertSeeInOrder(['Account', 'Invitation Code', 'Subscription', 'Assigned Plan', 'Progress Tracking'])
         ->assertSeeInOrder(['Trainer Guide', 'Client Guide'])
         ->assertSeeInOrder([
             'Create your coach account',
@@ -132,8 +136,18 @@ test('tutorial links to both professional guides and preserved product media', f
             'Open your assigned plan',
             'Follow workouts, exercise instructions, nutrition targets, and submit progress',
         ])
+        ->assertSee("I'm a Trainer", escape: false)
+        ->assertSee("I'm a Client", escape: false)
+        ->assertSee('Create programs, invite clients, review progress.')
+        ->assertSee('Join your coach, follow workouts, track progress.')
+        ->assertSee('Available on iPhone and Android')
+        ->assertSee('Secure subscription activation through Stripe')
+        ->assertSee('Coach-controlled programs and guidance')
+        ->assertSee('Why this matters:')
         ->assertSee('Start Free as a Trainer')
         ->assertSee('Enter Invitation Code')
+        ->assertSee('Need the complete walkthrough?')
+        ->assertSee('Download the detailed trainer and client guide.')
         ->assertDontSee('Organize your calendar')
         ->assertSee(asset('downloads/fitfreak-pro-coach-guide-en.pdf'), escape: false)
         ->assertSee(asset('downloads/fitfreak-pro-client-guide-en.pdf'), escape: false)
