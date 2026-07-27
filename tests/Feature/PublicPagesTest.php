@@ -153,10 +153,8 @@ test('how it works uses clean product screenshots for every workflow step', func
         ->assertSee('images/tutorial/coach/02-exercise-library.png', escape: false)
         ->assertSee('images/tutorial/coach/03-invite-client.png', escape: false)
         ->assertSee('images/tutorial/coach/04-create-program.png', escape: false)
-        ->assertSee('images/tutorial/coach/05-set-nutrition-targets.png', escape: false)
-        ->assertSee('images/tutorial/coach/07-workout-status.png', escape: false)
-        ->assertSee('images/tutorial/coach/08-client-parameters.png', escape: false)
         ->assertSee('images/tutorial/coach/09-nutrition-review.png', escape: false)
+        ->assertDontSee('workflow-app-collage', escape: false)
         ->assertSee('Invited clients activate their FitFreak Pro experience for $12.99 per month through Stripe.');
 });
 

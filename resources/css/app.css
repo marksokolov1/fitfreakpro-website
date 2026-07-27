@@ -732,37 +732,6 @@
   pointer-events: none;
 }
 
-.how-it-works-page .workflow-app-collage {
-  display: grid;
-  gap: 0.375rem;
-  padding: 0.375rem;
-}
-
-.how-it-works-page .workflow-app-collage-two {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.how-it-works-page .workflow-app-collage-review {
-  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
-}
-
-.how-it-works-page .workflow-app-collage img {
-  min-width: 0;
-  border-radius: 0.625rem;
-}
-
-.how-it-works-page .workflow-review-stack {
-  display: grid;
-  min-width: 0;
-  min-height: 0;
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-  gap: 0.375rem;
-}
-
-.how-it-works-page .workflow-review-stack img {
-  min-height: 0;
-}
-
 .workflow-price-note {
   width: min(100%, 52rem);
   margin: 1.25rem auto 0;
