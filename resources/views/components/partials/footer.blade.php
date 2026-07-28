@@ -17,10 +17,10 @@
     <div class="footer-navigation">
       <nav class="footer-navigation-grid" aria-label="Footer navigation">
         <div class="footer-link-group">
-          <p class="footer-heading">Product</p>
+          <p class="footer-heading">Explore</p>
           <div class="footer-links">
+            <a href="{{ route('home') }}"{!! request()->routeIs('home') ? ' aria-current="page"' : '' !!}>Home</a>
             <a href="{{ route('home') }}#features">Features</a>
-            <a href="{{ route('for-personal-trainers') }}"{!! request()->routeIs('for-personal-trainers') ? ' aria-current="page"' : '' !!}>For Trainers</a>
             <a href="{{ route('pricing') }}"{!! request()->routeIs('pricing') ? ' aria-current="page"' : '' !!}>Pricing</a>
           </div>
         </div>
