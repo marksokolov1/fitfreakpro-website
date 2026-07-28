@@ -167,6 +167,27 @@ test('store and support destinations remain unchanged', function (): void {
         ->assertSee('support@fitfreakpro.com');
 });
 
+test('footer presents the trainer conversion path and categorized navigation', function (): void {
+    $this->get(route('about'))
+        ->assertOk()
+        ->assertSeeInOrder([
+            'Ready to build your coaching workflow?',
+            'Create Free Trainer Account',
+            'Product',
+            'Resources',
+            'Company',
+            'Get the FitFreak Pro App',
+            'Follow FitFreak Pro',
+        ])
+        ->assertSee('FitFreak Pro helps personal trainers turn their coaching methodology into clear client programs and a focused digital coaching workflow.')
+        ->assertSee('For trainers creating programs and clients joining through trainer invitations.')
+        ->assertSeeInOrder(['Features', 'For Trainers', 'Pricing'])
+        ->assertSeeInOrder(['How It Works', 'Tutorial', 'FAQ', 'Support'])
+        ->assertSeeInOrder(['About', 'Privacy', 'Terms'])
+        ->assertSee('Contact')
+        ->assertSee('support@fitfreakpro.com');
+});
+
 test('navigation renders the current page state on the server', function (
     string $route,
     string $label

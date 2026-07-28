@@ -1,43 +1,73 @@
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <x-partials.brand footer />
-      <p class="footer-tagline">Personal trainer software built around your coaching.</p>
+<footer class="site-footer" id="site-footer">
+  <div class="container">
+    <div class="footer-cta">
+      <div>
+        <p class="footer-cta-kicker">Start free as a trainer</p>
+        <h2>Ready to build your coaching workflow?</h2>
+        <p>Create your free trainer account and start organizing your client coaching.</p>
+      </div>
+      <a class="btn btn-primary" href="{{ route('home') }}#download" data-track="footer_trainer_account_cta">Create Free Trainer Account</a>
     </div>
-    <div>
-      <p class="footer-heading">Navigation</p>
-      <nav class="footer-links" aria-label="Footer navigation">
-        <x-ui.navigation-link :href="route('home').'#product'" :active="request()->routeIs('home')">Product</x-ui.navigation-link>
-        <x-ui.navigation-link :href="route('how-it-works')" :active="request()->routeIs('how-it-works')">How It Works</x-ui.navigation-link>
-        <x-ui.navigation-link :href="route('for-personal-trainers')" :active="request()->routeIs('for-personal-trainers')">For Personal Trainers</x-ui.navigation-link>
-        <x-ui.navigation-link :href="route('pricing')" :active="request()->routeIs('pricing')">Pricing</x-ui.navigation-link>
-        <x-ui.navigation-link :href="route('tutorial')" :active="request()->routeIs('tutorial')">Tutorial</x-ui.navigation-link>
-        <x-ui.navigation-link :href="route('about')" :active="request()->routeIs('about')">About</x-ui.navigation-link>
-        <x-ui.navigation-link :href="route('support')" :active="request()->routeIs('support')">Support</x-ui.navigation-link>
-        <x-ui.navigation-link :href="route('privacy')" :active="request()->routeIs('privacy')">Privacy</x-ui.navigation-link>
-        <x-ui.navigation-link :href="route('terms')" :active="request()->routeIs('terms')">Terms</x-ui.navigation-link>
+  </div>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <x-partials.brand footer />
+      <p class="footer-tagline">FitFreak Pro helps personal trainers turn their coaching methodology into clear client programs and a focused digital coaching workflow.</p>
+    </div>
+    <div class="footer-navigation">
+      <nav class="footer-navigation-grid" aria-label="Footer navigation">
+        <div class="footer-link-group">
+          <p class="footer-heading">Product</p>
+          <div class="footer-links">
+            <a href="{{ route('home') }}#features">Features</a>
+            <a href="{{ route('for-personal-trainers') }}"{!! request()->routeIs('for-personal-trainers') ? ' aria-current="page"' : '' !!}>For Trainers</a>
+            <a href="{{ route('pricing') }}"{!! request()->routeIs('pricing') ? ' aria-current="page"' : '' !!}>Pricing</a>
+          </div>
+        </div>
+        <div class="footer-link-group">
+          <p class="footer-heading">Resources</p>
+          <div class="footer-links">
+            <a href="{{ route('how-it-works') }}"{!! request()->routeIs('how-it-works') ? ' aria-current="page"' : '' !!}>How It Works</a>
+            <a href="{{ route('tutorial') }}"{!! request()->routeIs('tutorial') ? ' aria-current="page"' : '' !!}>Tutorial</a>
+            <a href="{{ route('home') }}#faq">FAQ</a>
+            <a href="{{ route('support') }}"{!! request()->routeIs('support') ? ' aria-current="page"' : '' !!}>Support</a>
+          </div>
+        </div>
+        <div class="footer-link-group">
+          <p class="footer-heading">Company</p>
+          <div class="footer-links">
+            <a href="{{ route('about') }}"{!! request()->routeIs('about') ? ' aria-current="page"' : '' !!}>About</a>
+            <a href="{{ route('privacy') }}"{!! request()->routeIs('privacy') ? ' aria-current="page"' : '' !!}>Privacy</a>
+            <a href="{{ route('terms') }}"{!! request()->routeIs('terms') ? ' aria-current="page"' : '' !!}>Terms</a>
+          </div>
+        </div>
       </nav>
     </div>
-    <div>
-      <p class="footer-heading">Download</p>
-      <div class="store-row">
-        <a class="store-badge" href="https://apps.apple.com/us/app/fit-freak-pro/id6742347988" target="_blank" rel="noopener noreferrer" data-track="app_store_click" aria-label="Download FitFreak Pro on the App Store">
-          <span>Download on the<strong>App Store</strong></span>
-        </a>
-        <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.duseca.fitfreak" target="_blank" rel="noopener noreferrer" data-track="google_play_click" aria-label="Get FitFreak Pro on Google Play">
-          <span>Get it on<strong>Google Play</strong></span>
-        </a>
+    <div class="footer-actions">
+      <div class="footer-download">
+        <p class="footer-heading">Get the FitFreak Pro App</p>
+        <p class="footer-audience-note">For trainers creating programs and clients joining through trainer invitations.</p>
+        <div class="store-row">
+          <a class="store-badge" href="https://apps.apple.com/us/app/fit-freak-pro/id6742347988" target="_blank" rel="noopener noreferrer" data-track="app_store_click" aria-label="Download FitFreak Pro on the App Store">
+            <span>Download on the<strong>App Store</strong></span>
+          </a>
+          <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.duseca.fitfreak" target="_blank" rel="noopener noreferrer" data-track="google_play_click" aria-label="Get FitFreak Pro on Google Play">
+            <span>Get it on<strong>Google Play</strong></span>
+          </a>
+        </div>
       </div>
-      <p class="footer-heading footer-social-heading">Social</p>
-      <a class="social-link" href="https://www.linkedin.com/company/fitfreak-pro/" target="_blank" rel="noopener noreferrer" data-track="linkedin_click" aria-label="FitFreak Pro on LinkedIn">LinkedIn</a>
+      <div class="footer-social">
+        <p class="footer-heading footer-social-heading">Follow FitFreak Pro</p>
+        <a class="social-link" href="https://www.linkedin.com/company/fitfreak-pro/" target="_blank" rel="noopener noreferrer" data-track="linkedin_click" aria-label="FitFreak Pro on LinkedIn">LinkedIn</a>
+      </div>
     </div>
   </div>
   <div class="container footer-legal">
     <span>© {{ now()->year }} FitFreak Pro. All rights reserved.</span>
-    <span>
+    <span class="footer-legal-links">
       <a href="{{ route('privacy') }}">Privacy</a> ·
       <a href="{{ route('terms') }}">Terms</a> ·
-      <a href="{{ route('support') }}">Support</a> ·
+      <a href="{{ route('support') }}">Contact</a> ·
       <a href="mailto:support@fitfreakpro.com" data-track="support_click">support@fitfreakpro.com</a>
     </span>
   </div>
