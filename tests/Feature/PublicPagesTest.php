@@ -186,6 +186,8 @@ test('footer presents the trainer conversion path and categorized navigation', f
         ->assertSeeInOrder(['About', 'Privacy', 'Terms'])
         ->assertDontSee('<p class="footer-heading">Product</p>', escape: false)
         ->assertDontSee('>For Trainers</a>', escape: false)
+        ->assertSee('https://www.instagram.com/fitfreak_pro/', escape: false)
+        ->assertSee('FitFreak Pro on Instagram')
         ->assertSee('Contact')
         ->assertSee('support@fitfreakpro.com');
 });

@@ -58,7 +58,10 @@
       </div>
       <div class="footer-social">
         <p class="footer-heading footer-social-heading">Follow FitFreak Pro</p>
-        <a class="social-link" href="https://www.linkedin.com/company/fitfreak-pro/" target="_blank" rel="noopener noreferrer" data-track="linkedin_click" aria-label="FitFreak Pro on LinkedIn">LinkedIn</a>
+        <div class="footer-social-links">
+          <a class="social-link" href="https://www.linkedin.com/company/fitfreak-pro/" target="_blank" rel="noopener noreferrer" data-track="linkedin_click" aria-label="FitFreak Pro on LinkedIn">LinkedIn</a>
+          <a class="social-link" href="https://www.instagram.com/fitfreak_pro/" target="_blank" rel="noopener noreferrer" data-track="instagram_click" aria-label="FitFreak Pro on Instagram">Instagram</a>
+        </div>
       </div>
     </div>
   </div>
